@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="uk" class="page-site-root">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Контакти — StylKrok</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-layout page-contacts">
+    <aside class="index-sidebar" aria-label="Навігація по розділах">
+      <div class="index-sidebar__inner">
+        <a class="index-sidebar__brand logo logo--index" href="index.html">
+          <i data-lucide="shopping-bag" class="logo__mark" width="26" height="26" aria-hidden="true"></i>
+          <span>StylKrok</span>
+        </a>
+        <p class="index-sidebar__tagline">взуття · одяг · аксесуари</p>
+
+        <h2 class="index-sidebar__title">Меню</h2>
+        <nav class="site-nav site-nav--icons site-nav--sidebar" aria-label="Головна навігація">
+          <a class="nav-tile" href="index.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="home" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Головна</span>
+          </a>
+          <a class="nav-tile" href="articles.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="newspaper" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Статті</span>
+          </a>
+          <a class="nav-tile" href="catalog.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="layout-grid" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Каталог</span>
+          </a>
+          <a class="nav-tile" href="gallery.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="images" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Галерея</span>
+          </a>
+          <a class="nav-tile" href="registration.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="user-plus" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Реєстрація</span>
+          </a>
+          <a class="nav-tile" href="contacts.html" aria-current="page">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="map-pin" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Контакти</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="index-content">
+      <div class="index-feed">
+        <header class="index-top-header" aria-label="Page header">
+          <div class="index-top-header__pattern" aria-hidden="true"></div>
+          <div class="index-top-header__inner">
+            <p class="index-top-header__eyebrow">Curated for the city</p>
+            <h1 class="index-top-header__title">Contacts</h1>
+            <p class="index-top-header__sub">Address &amp; feedback</p>
+            <div class="index-top-header__line" aria-hidden="true"></div>
+          </div>
+        </header>
+
+        <main class="site-main site-main--index contacts-page" id="main">
+          <section class="index-intro contacts-page__intro" aria-labelledby="contacts-intro-title">
+            <h2 class="index-intro__title" id="contacts-intro-title">Зв’язок із StylKrok</h2>
+            <p class="index-intro__text">
+              Нижче — адреса й схема проходу для навчального макета. Форма допоможе поставити питання щодо розміру,
+              наявності кольору або умов повернення перед замовленням.
+            </p>
+            <p class="index-intro__text index-intro__text--follow">
+              Оформити акаунт можна на сторінці <a href="registration.html">реєстрації</a>; асортимент — у
+              <a href="catalog.html">каталозі</a>.
+            </p>
+          </section>
+
+          <section class="contacts-page__shell contacts-page__map-block" aria-labelledby="contacts-map-title">
+            <h2 class="index-section-title contacts-page__section-title" id="contacts-map-title">Як нас знайти</h2>
+            <p class="contacts-page__lead">
+              Точка на карті та підказка по метро — для звіту замініть знімок у папці <code>images/</code> на власний скриншот.
+            </p>
+            <div class="contacts-page__address">
+              <p class="contacts-page__address-line">
+                <i data-lucide="map-pin" class="lucide-inline" width="18" height="18" aria-hidden="true"></i>
+                <strong>Адреса:</strong> м. Київ, вул. Хрещатик, 1 (приклад для навчальної верстки).
+              </p>
+              <p class="contacts-page__address-line">
+                Як дістатися: ст. метро «Хрещатик» або «Майдан Незалежності», 3 хв пішки.
+              </p>
+            </div>
+            <figure class="contacts-page__figure">
+              <img
+                class="map-image contacts-page__map-img"
+                src="images/map-screenshot.png"
+                width="600"
+                height="360"
+                alt="Схема: як дістатися (заглушка, замініть на знімок з Google Карт у звіті)"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption class="contacts-page__map-caption">
+                Карта (заглушка; для здачі вставте власний скриншот у <code>images/map-screenshot.png</code>)
+              </figcaption>
+            </figure>
+          </section>
+
+          <section class="contacts-page__shell contacts-page__form-block" aria-labelledby="contacts-form-title">
+            <h2 class="index-section-title contacts-page__section-title" id="contacts-form-title">Зв’яжіться з нами</h2>
+            <p class="contacts-page__lead">
+              Заповніть форму — ми відповімо у робочі дні. Поля з позначкою обов’язковості перевіряє браузер перед відправленням.
+            </p>
+            <form class="form-contact contacts-page__form" action="#" method="get">
+              <p>
+                <label for="c-name">Ім’я</label>
+                <input class="text-field" type="text" id="c-name" name="cname" required />
+              </p>
+              <p>
+                <label for="c-phone">Телефон</label>
+                <input class="text-field" type="tel" id="c-phone" name="cphone" />
+              </p>
+              <p>
+                <label for="c-mail">Email</label>
+                <input class="text-field" type="email" id="c-mail" name="cmail" required />
+              </p>
+              <p>
+                <label for="c-q">Задайте питання</label>
+                <textarea class="text-field" id="c-q" name="cquestion" rows="4" cols="40" required></textarea>
+              </p>
+              <p class="contacts-page__submit-row">
+                <button class="btn btn--submit" type="submit">Надіслати</button>
+              </p>
+            </form>
+          </section>
+        </main>
+
+        <footer class="site-footer site-footer--index" role="contentinfo">
+          <div class="site-footer--index__inner">
+            <p class="site-footer--index__copy">&copy; 2025 StylKrok. Всі права захищені.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

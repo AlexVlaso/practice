@@ -1,0 +1,2233 @@
+/* === ЛР №2: загальні + п.1 фон (зображення у правому верхньому куті) === */
+html {
+  --font-ui: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  /* Палітра StylKrok / референс X (Twitter): */
+  --c-ink: #1d1a39;
+  --c-plum: #451952;
+  --c-wine: #662549;
+  --c-rose: #ae445a;
+  --c-amber: #f39f5a;
+  --c-blush: #e8bcb9;
+
+  --text: #1a1a1a;
+  --bg: #f6f2ec;
+  --nav-bg: #2c1810;
+  --nav-fg: #f5e6d3;
+  --nav-hover: #5c3d2e;
+  --excerpt-bg: #ede4db;
+  --link-article: #1a3d5c;
+  --read-more: #0b57d0;
+  --comments-link: #777;
+}
+
+/* Дизайн-система (нейтральні, primary coral, теплі фони — як у макеті) */
+:root {
+  --light-grey-400: #a1a3a7;
+  --dark-grey-100: #141823;
+  --gray-50: #f9f9f9;
+  --gray-100: #f1f1f1;
+  --gray-300: #c0c6cb;
+  --gray-400: #a1a3a7;
+  --gray-500: #72747b;
+  --gray-700: #44464f;
+  --gray-850: #141823;
+  --gray-900: #1d2939;
+  --gray-950: #09090b;
+  --gray-disabled: #a1a1aa;
+  --gray-tab: #71717a;
+  --gray-label: #667085;
+  --gray-calendar: #2c4251;
+  --gray-icon: #d0d1d3;
+  --gray-stroke: #cccccc;
+  --gray-background: #f2f2f2;
+
+  --border-light: #efefef;
+  --border-table: #e8e8e9;
+  --border-warm: #e9e4e0;
+  --border-subtle: #f0f0f0;
+  --border-tag: #eaeaea;
+  --border-blue-gray: #e2e8f0;
+  --border-disabled: #e5e7eb;
+  --border-medium: #d5d8dd;
+  --border-warm-medium: #dbd1c9;
+  --border-warm-accent: #d7aea8;
+  --border-warm-alpha: #d7aea8b2;
+  --border-chat: #ece0cb;
+  --border-avatar: #e6e6e6;
+
+  --primary-50: #faeae8;
+  --primary-100: #f6ddd9;
+  --primary-200: #f9c6c0;
+  --primary-bg: #fff1ef;
+  --primary-dot: #f7dad3;
+  --primary-border-light: #d1524133;
+  --divider-warm: #f5ead7;
+  --primary-border: #e39486;
+
+  --icon-muted: #eeeeef;
+
+  --page-bg: #fcfaf6;
+  --warm-bg: #fbf7f0;
+  --tag-warm-bg: #f4e8de;
+  --column-warm-bg: #f6f0eb;
+  --avatar-bg: #e6e6e6;
+  --progress-bg: #e6e2e2;
+  --toast-bg: #fdfbf7;
+  --toast-bg-overlay: #fdfbf7;
+  --reports-filters-base: #eee8d7;
+  --muted-canvas: #f6f5f2;
+
+  --overlay-dark: #00000066;
+  --white-overlay: #ffffff0d;
+  --white-overlay-hover: #ffffff1a;
+
+  --green-success: #1d8b2b;
+  --green-toast: #09a129;
+  --green-active: #058241;
+  --green-insights: #0c7c59;
+  --green-insights-overlay: #0c7c590d;
+  --green-light-bg: #f2f9f5;
+  --green-bg: #e2faf3;
+  --green-icon: #a1cfc3;
+  --green-soft-bg: #e6f7f1;
+  --green-text: #546f66;
+  --sage: #83a298;
+  --green-indicator: #34a853;
+
+  --switch-active: #0f172a;
+
+  --chart-purple-bg: #f7f5ff;
+  --chart-purple-text: #685b8c;
+  --chart-blue-bg: #f5faff;
+  --chart-blue: #4a68b3;
+  --chart-purple: #908ddf;
+  --chart-rose: #d8818f;
+  --chart-gold: #e9c675;
+  --chart-tan: #d7bfa8;
+  --chart-sky: #93bdda;
+  --chart-purple-light: #f5f3fc;
+
+  --activity-meeting-bg: #e4e3f7;
+  --activity-meeting-text: #575590;
+  --activity-sick-bg: #fef1f3;
+  --activity-sick-text: #b24c5c;
+  --activity-sick-indicator: #d28b96;
+  --activity-break-text: #845b32;
+  --activity-education-bg: #f3faff;
+  --activity-education-text: #3c6e92;
+  --activity-unplanned-indicator: #9e77ed;
+
+  --insights-purple-bg: #efecff;
+  --insights-purple: #6047a5;
+  --insights-purple-icon: #d7cffe;
+
+  --warning-orange: #eda917;
+
+  --primary-icon-bg: #e68b7f1a;
+  --primary-icon-fill: #d152411f;
+
+  --disabled-border-muted: #f5f5f3;
+  --disabled-bg-muted: #fdfdfb;
+  --disabled-text-muted: #a0a0a2;
+
+  --hover-bg-transparent: #f9f9f980;
+
+  --toast-from: #fffefd;
+  --toast-to: #fff8eb;
+
+  --billing-premium-accent: #cd6042;
+
+  --info-badge-bg: #7ac2df1a;
+  --info-badge-text: #007cad;
+
+  --primary: #d15241;
+  --accent-soft: #fef8f7;
+  --primary-hover: #b94232;
+  --secondary: #fff1ef80;
+  --background: #f0eeeb;
+  --foreground: #141823;
+  --muted: #eeeeee;
+  --muted-foreground: #d0d1d3;
+  --muted-border: #e4e4e733;
+  --border: #e4e4e7;
+  --border-secondary: #f2f2f2;
+  --disabled-foreground: #a1a3a7;
+  --secondary-background: #f9f9f9;
+  --secondary-foreground: #72747b;
+  --tertiary-background: #f4f4f5;
+  --muted-background: #fafafa;
+  --input: #ffffff;
+  --input-border: #e2e8f0;
+  --input-border-active: #64748b;
+  --input-border-disabled: #e2e8f0;
+  --button-border: #e4e4e780;
+  --outline: #ffffff80;
+  --base: #44464f;
+  --card-border: #fff7f6;
+  --card-active-border: #d1524180;
+  --card-active-background: #fff7f6;
+  --mint-light: #c5f5ec;
+  --mint: #279482;
+  --sky-light: #d4f3ff;
+  --sky: #277594;
+  --purple-light: #b42ff21a;
+  --purple: #9f54b0;
+  --send: #fbf7f0;
+}
+
+html {
+  background-color: var(--bg);
+  background-image: url("../images/bg-corner.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 180px auto;
+  font-family: var(--font-ui);
+  color: var(--text);
+  line-height: 1.55;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+}
+
+/* === п.2 Меню: шрифт, колір, фон === */
+.site-header {
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.logo {
+  font-weight: 700;
+  text-decoration: none;
+  color: #3d2918;
+  font-size: 1.15rem;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.95rem;
+  color: var(--nav-fg);
+  background-color: var(--nav-bg);
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background-color: var(--nav-hover);
+  color: #fff;
+}
+
+.site-nav a[aria-current="page"] {
+  background-color: #8b5a3c;
+  color: #fff;
+  font-weight: 600;
+}
+
+.site-main {
+  flex: 1;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+}
+
+.site-footer {
+  border-top: 1px solid #c9bfb4;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.lead {
+  margin-top: 0;
+}
+
+/* Головна: маркований список (клас за замовчуванням для інших сторінок) */
+.index-links {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* === Головна: сайдбар + стрічка (палітра з макету: page-bg + primary) === */
+html.page-site-root {
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  background-image: linear-gradient(
+    180deg,
+    var(--page-bg) 0%,
+    color-mix(in srgb, var(--warm-bg) 55%, var(--page-bg)) 48%,
+    var(--page-bg) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+body.page-layout {
+  /* Міст до існуючих класів — семантика з дизайн-системи */
+  --c-ink: var(--foreground);
+  --c-plum: var(--gray-700);
+  --c-wine: var(--secondary-foreground);
+  --c-rose: var(--primary);
+  --c-amber: var(--primary);
+  --c-blush: var(--border-warm);
+
+  --ix-accent: var(--primary);
+  --ix-accent-soft: var(--primary-icon-bg);
+  --ix-rose: var(--primary);
+  --ix-sidebar: var(--foreground);
+  --ix-sidebar-mid: var(--gray-700);
+  --ix-sidebar-wine: var(--secondary-foreground);
+  --ix-sidebar-border: var(--border-warm-medium);
+  --ix-text-on-dark: var(--foreground);
+  --ix-muted: var(--gray-500);
+  --ix-canvas: var(--page-bg);
+  --ix-surface: transparent;
+  --ix-border: var(--border-warm);
+  --ix-text: var(--foreground);
+  --ix-text-secondary: var(--secondary-foreground);
+  /* Центрований текстовий блок у правій колонці (шапка + main + футер) */
+  --ix-content-max: min(82rem, 100%);
+  --ix-section-gap: clamp(2.35rem, 5vw, 3.35rem);
+  --ix-main-padding-x: clamp(1.2rem, 2.8vw, 1.75rem);
+  --index-header-height: 4.75rem;
+  --ix-card-shadow:
+    0 5px 24px color-mix(in srgb, var(--foreground) 7%, transparent),
+    0 2px 8px color-mix(in srgb, var(--foreground) 4%, transparent);
+  --ix-card-shadow-strong:
+    0 10px 40px color-mix(in srgb, var(--foreground) 8%, transparent),
+    0 4px 14px color-mix(in srgb, var(--foreground) 5%, transparent);
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--ix-canvas);
+  font-family: var(--font-ui);
+  color: var(--ix-text);
+}
+
+/* Сайдбар — колонка на всю висоту сторінки (бордер до низу); меню всередині — sticky + скрол */
+body.page-layout .index-sidebar {
+  flex: 0 0 clamp(15.5rem, 18vw, 18rem);
+  width: clamp(15.5rem, 18vw, 18rem);
+  align-self: stretch;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  position: relative;
+  z-index: 5;
+  background: color-mix(in srgb, var(--page-bg) 78%, transparent);
+  backdrop-filter: blur(12px) saturate(1.08);
+  -webkit-backdrop-filter: blur(12px) saturate(1.08);
+  border-right: 1px solid color-mix(in srgb, var(--border-light) 85%, transparent);
+  box-shadow: none;
+  overflow: visible;
+}
+
+body.page-layout .index-sidebar__inner {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  padding: 1.25rem 0.85rem 1.5rem 1rem;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  body.page-layout .index-sidebar {
+    background: color-mix(in srgb, var(--page-bg) 94%, var(--warm-bg));
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+body.page-layout .index-sidebar__brand.logo--index span,
+body.page-layout .index-top-header__title,
+body.page-layout .index-intro__title,
+body.page-layout .index-highlight__title,
+body.page-layout .index-mini-card__title {
+  font-family: var(--font-display);
+}
+
+body.page-layout .index-sidebar__brand.logo--index {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ix-text-on-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  font-family: var(--font-ui);
+}
+
+body.page-layout .index-sidebar__brand .logo__mark {
+  color: var(--ix-accent);
+}
+
+body.page-layout .index-sidebar__tagline {
+  margin: 0.35rem 0 1.1rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ix-muted);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+body.page-layout .index-sidebar__title {
+  margin: 0 0 0.75rem;
+  padding: 0 0 0.6rem;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gray-700);
+  font-weight: 700;
+  font-family: var(--font-ui);
+  line-height: 1.2;
+  border-bottom: 1px solid var(--border-warm-medium);
+}
+
+/* Права колонка: на всю ширину вікна (біля сайдбару); сіре поле на всю площу */
+body.page-layout .index-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: var(--ix-canvas);
+  border: none;
+}
+
+body.page-layout .site-nav--icons.site-nav--sidebar,
+body.page-layout .site-nav--sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  max-width: none;
+}
+
+body.page-layout .site-nav--sidebar .nav-tile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem 0.5rem 0.4rem 0.4rem;
+  min-height: 2.65rem;
+  text-align: left;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: var(--gray-700);
+  text-decoration: none;
+  background: color-mix(in srgb, var(--page-bg) 40%, #fff);
+  border-radius: 0.6rem;
+  border: 1px solid var(--border-warm);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--foreground) 4%, transparent);
+  transition:
+    color 0.16s ease,
+    background 0.16s ease,
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    transform 0.16s ease;
+}
+
+body.page-layout .site-nav--sidebar .nav-tile__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  flex-shrink: 0;
+  color: var(--ix-accent);
+  background: color-mix(in srgb, var(--primary) 7%, var(--page-bg));
+  border-radius: 0.45rem;
+  border: 1px solid color-mix(in srgb, var(--primary) 9%, var(--border-warm));
+  transition:
+    color 0.16s ease,
+    background 0.16s ease,
+    border-color 0.16s ease;
+}
+
+body.page-layout .site-nav--sidebar .nav-tile__icon svg {
+  stroke-width: 2;
+}
+
+body.page-layout .site-nav--sidebar .nav-tile__label {
+  text-align: left;
+  padding-right: 0.1rem;
+}
+
+body.page-layout .site-nav--sidebar .nav-tile:hover,
+body.page-layout .site-nav--sidebar .nav-tile:focus-visible {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--card-active-background) 70%, #fff);
+  border-color: color-mix(in srgb, var(--primary) 22%, var(--border-warm));
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--foreground) 5%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--primary) 7%, transparent);
+  outline: none;
+  transform: translateX(1px);
+}
+
+body.page-layout .site-nav--sidebar .nav-tile:hover .nav-tile__icon,
+body.page-layout .site-nav--sidebar .nav-tile:focus-visible .nav-tile__icon {
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 12%, var(--page-bg));
+  border-color: color-mix(in srgb, var(--primary) 22%, var(--border-warm));
+}
+
+body.page-layout .site-nav--sidebar .nav-tile[aria-current="page"] {
+  color: var(--foreground);
+  font-weight: 700;
+  background: var(--card-active-background);
+  border-color: var(--card-active-border);
+  box-shadow: inset 3px 0 0 0 var(--primary);
+  transform: none;
+}
+
+body.page-layout .site-nav--sidebar .nav-tile[aria-current="page"] .nav-tile__icon {
+  color: #fff;
+  background: color-mix(in srgb, var(--primary) 88%, #2a1210);
+  border-color: color-mix(in srgb, var(--primary) 45%, #5c2a20);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+
+/* Стрічка контенту — прозора, заливка від html/body */
+body.page-layout .index-feed {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Хедер сторінки: sticky + напівпрозорість + blur поверх скролу */
+body.page-layout .index-top-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  isolation: isolate;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  height: var(--index-header-height);
+  min-height: var(--index-header-height);
+  max-height: var(--index-header-height);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--primary-bg) 34%, transparent) 0%,
+    color-mix(in srgb, var(--warm-bg) 38%, transparent) 48%,
+    color-mix(in srgb, var(--page-bg) 42%, transparent) 100%
+  );
+  backdrop-filter: blur(14px) saturate(1.12);
+  -webkit-backdrop-filter: blur(14px) saturate(1.12);
+  border-bottom: 1px solid color-mix(in srgb, var(--border-light) 58%, transparent);
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  body.page-layout .index-top-header {
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--primary-bg) 78%, var(--page-bg)) 0%,
+      color-mix(in srgb, var(--warm-bg) 88%, var(--page-bg)) 52%,
+      var(--page-bg) 100%
+    );
+  }
+}
+
+body.page-layout .index-top-header__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.14;
+  background-image:
+    radial-gradient(circle at 22% 28%, color-mix(in srgb, var(--primary) 22%, transparent) 0, transparent 48%),
+    radial-gradient(circle at 78% 72%, color-mix(in srgb, var(--billing-premium-accent) 18%, transparent) 0, transparent 44%),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 8px,
+      color-mix(in srgb, var(--foreground) 5%, transparent) 8px,
+      color-mix(in srgb, var(--foreground) 5%, transparent) 9px
+    );
+  pointer-events: none;
+}
+
+body.page-layout .index-top-header__inner {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--ix-content-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  text-align: center;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+
+body.page-layout .index-top-header__eyebrow {
+  display: none;
+}
+
+body.page-layout .index-top-header__title {
+  margin: 0 0 0.12rem;
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--c-ink);
+  line-height: 1.15;
+  text-shadow: none;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.page-layout .index-top-header__sub {
+  margin: 0;
+  font-size: 0.68rem;
+  color: var(--c-wine);
+  font-weight: 500;
+  line-height: 1.25;
+  max-width: min(28rem, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 2.5em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+body.page-layout .index-top-header__line {
+  display: none;
+}
+
+body.page-layout .site-main--index {
+  flex: 1 1 auto;
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--ix-content-max);
+  box-sizing: border-box;
+  padding: clamp(1.5rem, 2.8vw, 2rem) var(--ix-main-padding-x) clamp(2.5rem, 5vw, 3.35rem);
+  background: transparent;
+  border: none;
+}
+
+/* Інтро + bento + highlight (новий контент) */
+body.page-layout .index-intro {
+  margin-bottom: var(--ix-section-gap);
+  padding: 1.45rem 1.45rem 1.55rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-light);
+  background: linear-gradient(
+    165deg,
+    var(--muted-canvas) 0%,
+    var(--input) 58%
+  );
+  box-shadow: var(--ix-card-shadow);
+}
+
+body.page-layout .index-intro__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--c-ink);
+}
+
+body.page-layout .index-intro__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--c-wine);
+}
+
+body.page-layout .index-intro__text a {
+  color: var(--c-rose);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--c-rose) 50%, transparent);
+}
+
+body.page-layout .index-intro__text a:hover {
+  color: var(--primary-hover);
+  border-bottom-color: var(--primary-hover);
+}
+
+body.page-layout .index-intro__text--follow {
+  margin-top: 0.75rem;
+}
+
+body.page-layout .index-bento {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.15rem;
+  margin-bottom: var(--ix-section-gap);
+}
+
+body.page-layout .index-bento__item {
+  padding: 1.15rem 1.15rem 1.25rem;
+  background: color-mix(in srgb, var(--tag-warm-bg) 42%, var(--secondary-background));
+  border: 1px solid var(--border-light);
+  border-radius: 0.95rem;
+  box-shadow: var(--ix-card-shadow);
+  transition: box-shadow 0.22s, border-color 0.22s, transform 0.22s;
+}
+
+body.page-layout .index-bento__item:hover {
+  border-color: color-mix(in srgb, var(--primary) 35%, var(--border-warm));
+  box-shadow: var(--ix-card-shadow-strong);
+  transform: translateY(-2px);
+}
+
+body.page-layout .index-bento__item--wide {
+  grid-column: 1 / -1;
+}
+
+body.page-layout .index-bento__h {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--c-ink);
+}
+
+body.page-layout .index-bento__h svg {
+  flex-shrink: 0;
+  color: var(--c-amber);
+}
+
+body.page-layout .index-bento__item p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--c-wine);
+}
+
+body.page-layout .index-bento__item a {
+  color: var(--c-rose);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+body.page-layout .index-bento__item a:hover {
+  text-decoration: underline;
+}
+
+body.page-layout .index-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--ix-section-gap);
+  padding: 1.65rem 1.35rem 1.75rem;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--primary-border) 55%, var(--border-warm));
+  background: linear-gradient(165deg, var(--primary-50) 0%, var(--toast-bg) 48%, var(--accent-soft) 100%);
+  box-shadow: var(--ix-card-shadow-strong);
+}
+
+body.page-layout .index-highlight__icon {
+  color: var(--c-amber);
+  margin-bottom: 0.4rem;
+  display: flex;
+}
+
+body.page-layout .index-highlight__title {
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--c-ink);
+}
+
+body.page-layout .index-highlight__text {
+  margin: 0 0 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--c-wine);
+  max-width: 36rem;
+}
+
+body.page-layout .index-highlight__link {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--billing-premium-accent) 72%, var(--primary)));
+  border-radius: 9999px;
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--primary) 38%, transparent);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+body.page-layout .index-highlight__link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--primary-hover) 42%, transparent);
+  color: #fff;
+}
+
+body.page-layout .index-catalog-teasers {
+  margin-bottom: var(--ix-section-gap);
+}
+
+body.page-layout .index-catalog-teasers .index-section-title {
+  margin-bottom: 0.6rem;
+}
+
+body.page-layout .index-catalog-teasers__lead {
+  margin: 0 0 1.35rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--c-wine);
+}
+
+body.page-layout .index-catalog-teasers__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr));
+  gap: 1.15rem 1.25rem;
+}
+
+body.page-layout .index-mini-card {
+  margin: 0;
+  padding: 1.3rem 1.25rem 1.4rem;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--ix-border) 92%, transparent);
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--column-warm-bg) 72%, #fff),
+    var(--input) 55%
+  );
+  box-shadow: var(--ix-card-shadow);
+  transition: border-color 0.22s, box-shadow 0.22s, transform 0.22s;
+}
+
+body.page-layout .index-mini-card:hover {
+  border-color: color-mix(in srgb, var(--primary) 38%, var(--border-warm));
+  box-shadow: var(--ix-card-shadow-strong);
+  transform: translateY(-3px);
+}
+
+body.page-layout .index-mini-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.85rem;
+  height: 2.85rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.75rem;
+  color: var(--primary);
+  background: var(--primary-icon-bg);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--primary) 22%, transparent);
+}
+
+body.page-layout .index-mini-card__title {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+body.page-layout .index-mini-card__title a {
+  color: var(--c-ink);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--c-rose) 35%, transparent);
+}
+
+body.page-layout .index-mini-card__title a:hover {
+  color: var(--c-rose);
+  border-bottom-color: var(--c-rose);
+}
+
+body.page-layout .index-mini-card__text {
+  margin: 0;
+  font-size: 0.81rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--c-wine) 92%, #555);
+}
+
+/* --- Каталог: щільна сітка карток з власним виглядом (не mini-card) --- */
+body.page-layout.page-catalog .catalog-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  gap: 1.25rem 1.35rem;
+  margin-bottom: var(--ix-section-gap);
+}
+
+body.page-layout .catalog-card {
+  position: relative;
+  margin: 0;
+  padding: 1.35rem 1.35rem 1.45rem 1.55rem;
+  border-radius: 1.05rem;
+  border: 1px solid color-mix(in srgb, var(--border-warm-medium) 82%, var(--border-light));
+  box-shadow:
+    0 2px 14px color-mix(in srgb, var(--foreground) 5%, transparent),
+    inset 0 1px 0 color-mix(in srgb, #fff 65%, transparent);
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+body.page-layout .catalog-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 1rem 0 0 1rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary) 85%, #6b4420),
+    color-mix(in srgb, var(--billing-premium-accent) 75%, var(--primary))
+  );
+  opacity: 0.92;
+}
+
+body.page-layout .catalog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ix-card-shadow-strong);
+  border-color: color-mix(in srgb, var(--primary) 28%, var(--border-warm));
+}
+
+body.page-layout .catalog-card--shoes {
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--muted-canvas) 90%, var(--primary-50)) 0%,
+    var(--input) 100%
+  );
+}
+
+body.page-layout .catalog-card--shoes::before {
+  background: linear-gradient(180deg, var(--primary), color-mix(in srgb, var(--primary-hover) 88%, #333));
+}
+
+body.page-layout .catalog-card--apparel {
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--toast-bg) 92%, var(--accent-soft)) 0%,
+    var(--secondary-background) 100%
+  );
+}
+
+body.page-layout .catalog-card--apparel::before {
+  background: linear-gradient(180deg, var(--c-amber), color-mix(in srgb, var(--billing-premium-accent) 70%, var(--c-amber)));
+}
+
+body.page-layout .catalog-card--accessories {
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--tag-warm-bg) 55%, var(--muted-canvas)) 0%,
+    var(--input) 96%
+  );
+}
+
+body.page-layout .catalog-card--accessories::before {
+  background: linear-gradient(180deg, var(--c-rose), color-mix(in srgb, var(--primary) 55%, var(--c-rose)));
+}
+
+body.page-layout .catalog-card--kids {
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--primary-50) 45%, var(--muted-canvas)) 0%,
+    color-mix(in srgb, var(--warm-bg) 35%, var(--input)) 100%
+  );
+}
+
+body.page-layout .catalog-card--kids::before {
+  background: linear-gradient(180deg, #7cb38a, #4d8c67);
+}
+
+body.page-layout .catalog-card--sport {
+  background: linear-gradient(155deg, color-mix(in srgb, var(--info-badge-bg) 35%, var(--muted-canvas)) 0%, var(--input) 100%);
+}
+
+body.page-layout .catalog-card--sport::before {
+  background: linear-gradient(180deg, #5b8bd9, #3d6cad);
+}
+
+body.page-layout .catalog-card--home {
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--column-warm-bg) 65%, var(--muted-canvas)) 0%,
+    var(--secondary-background) 100%
+  );
+}
+
+body.page-layout .catalog-card--home::before {
+  background: linear-gradient(180deg, #c49a6c, #9a734a);
+}
+
+body.page-layout .catalog-card--care {
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--accent-soft) 40%, var(--muted-canvas)) 0%,
+    var(--input) 100%
+  );
+}
+
+body.page-layout .catalog-card--care::before {
+  background: linear-gradient(180deg, #b565c8, #8e449f);
+}
+
+body.page-layout .catalog-card--drops {
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--billing-premium-accent) 22%, var(--muted-canvas)) 0%,
+    var(--toast-bg) 100%
+  );
+}
+
+body.page-layout .catalog-card--drops::before {
+  background: linear-gradient(180deg, #e8b84a, #c99530);
+}
+
+body.page-layout .catalog-card__head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+}
+
+body.page-layout .catalog-card__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.95rem;
+  color: var(--primary-hover);
+  background: color-mix(in srgb, #fff 82%, var(--primary-icon-bg));
+  border: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--foreground) 6%, transparent);
+}
+
+body.page-layout .catalog-card__title {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--c-ink);
+}
+
+body.page-layout .catalog-card__title .catalog-card__tag {
+  margin-left: 0.35rem;
+  vertical-align: 0.08em;
+}
+
+body.page-layout .catalog-card__subs {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0.7rem 0 0;
+  border-top: 1px dashed color-mix(in srgb, var(--border-warm-medium) 88%, transparent);
+}
+
+body.page-layout .catalog-card__subs li {
+  margin: 0;
+  padding: 0.46rem 0;
+  font-size: 0.86rem;
+  line-height: 1.48;
+  color: color-mix(in srgb, var(--c-wine) 96%, #444);
+  border-bottom: 1px solid color-mix(in srgb, var(--border-light) 75%, transparent);
+}
+
+body.page-layout .catalog-card__subs li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+body.page-layout .catalog-card__item--new {
+  font-weight: 600;
+}
+
+body.page-layout .catalog-card__tag {
+  display: inline-block;
+  margin-left: 0.3rem;
+  padding: 0.05rem 0.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--primary-hover) 92%, #222);
+  background: color-mix(in srgb, var(--primary-50) 75%, #fff);
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--primary) 28%, transparent);
+  vertical-align: 0.14em;
+}
+
+/* --- Галерея (сторінка): блок інтро + картки прев’ю як у решті layout --- */
+body.page-layout.page-gallery .gallery-page__intro .gallery-page__grid {
+  margin-top: 1.35rem;
+}
+
+body.page-layout.page-gallery .gallery-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1.25rem 1.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.page-layout.page-gallery .gallery-page__card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 1.05rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border-warm-medium) 80%, var(--border-light));
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--muted-canvas) 94%, var(--primary-50)) 0%,
+    var(--input) 100%
+  );
+  box-shadow: var(--ix-card-shadow);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+body.page-layout.page-gallery .gallery-page__card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--primary) 28%, var(--border-warm));
+  box-shadow: var(--ix-card-shadow-strong);
+}
+
+body.page-layout.page-gallery .gallery-page__card:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--primary) 72%, transparent);
+  outline-offset: 3px;
+}
+
+body.page-layout.page-gallery .gallery-page__thumb {
+  position: relative;
+  display: block;
+  background: color-mix(in srgb, var(--foreground) 6%, var(--muted-canvas));
+}
+
+body.page-layout.page-gallery .gallery-page__thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+body.page-layout.page-gallery .gallery-page__badge {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  padding: 0.26rem 0.62rem;
+  font-family: var(--font-ui);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--c-ink);
+  background: color-mix(in srgb, #fff 92%, var(--toast-bg));
+  border: 1px solid color-mix(in srgb, var(--border-warm-medium) 72%, transparent);
+  border-radius: 999px;
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+body.page-layout.page-gallery .gallery-page__caption {
+  padding: 0.85rem 1rem 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--c-wine);
+  border-top: 1px dashed color-mix(in srgb, var(--border-warm-medium) 85%, transparent);
+  background: color-mix(in srgb, var(--toast-bg) 65%, transparent);
+}
+
+/* --- Реєстрація: інтро + панель форми в стилі інших сторінок --- */
+body.page-layout.page-registration .registration-page__intro {
+  margin-bottom: var(--ix-section-gap);
+}
+
+body.page-layout.page-registration .registration-page__shell {
+  margin-bottom: var(--ix-section-gap);
+  padding: 1.45rem 1.45rem 1.65rem;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--border-table) 88%, var(--border-warm-medium));
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--muted-canvas) 92%, var(--primary-50)) 0%,
+    color-mix(in srgb, var(--input) 92%, var(--muted-background)) 100%
+  );
+  box-shadow: var(--ix-card-shadow);
+}
+
+body.page-layout.page-registration .registration-page__form-title {
+  margin-bottom: 0.45rem;
+}
+
+body.page-layout.page-registration .registration-page__lead {
+  margin: 0 0 1.35rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--c-wine);
+}
+
+body.page-layout.page-registration .registration-page__form .text-field,
+body.page-layout.page-registration .registration-page__form textarea.text-field {
+  width: 100%;
+  max-width: min(30rem, 100%);
+  padding: 0.52rem 0.68rem;
+  border-radius: 0.5rem;
+}
+
+body.page-layout.page-registration .registration-page__form .text-field--password {
+  max-width: min(14rem, 100%);
+}
+
+body.page-layout.page-registration .registration-page__form p {
+  margin: 0.85rem 0;
+}
+
+body.page-layout.page-registration .registration-page__form > p > label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--c-ink);
+}
+
+body.page-layout.page-registration .form-register__field {
+  padding: 1rem 1.1rem 1.08rem;
+  margin: 1.05rem 0;
+  border-radius: 0.85rem;
+}
+
+body.page-layout.page-registration .form-register__field legend {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--c-ink);
+  padding: 0 0.35rem;
+}
+
+body.page-layout.page-registration .form-register__field label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0.4rem 1rem 0.4rem 0;
+  font-weight: 500;
+  font-size: 0.84rem;
+}
+
+body.page-layout.page-registration .form-register__buttons {
+  margin-top: 1.35rem;
+  padding-top: 1.15rem;
+  border-top: 1px dashed color-mix(in srgb, var(--border-warm-medium) 82%, transparent);
+}
+
+body.page-layout.page-registration .form-register__buttons .btn {
+  border-radius: 999px;
+  padding: 0.52rem 1.45rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+/* --- Контакти: інтро + блок карти + блок форми --- */
+body.page-layout.page-contacts .contacts-page__intro {
+  margin-bottom: var(--ix-section-gap);
+}
+
+body.page-layout.page-contacts .contacts-page__shell {
+  margin-bottom: var(--ix-section-gap);
+  padding: 1.45rem 1.45rem 1.65rem;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--border-table) 88%, var(--border-warm-medium));
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--muted-canvas) 92%, var(--primary-50)) 0%,
+    color-mix(in srgb, var(--input) 92%, var(--muted-background)) 100%
+  );
+  box-shadow: var(--ix-card-shadow);
+}
+
+body.page-layout.page-contacts .contacts-page__section-title {
+  margin-bottom: 0.45rem;
+}
+
+body.page-layout.page-contacts .contacts-page__lead {
+  margin: 0 0 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--c-wine);
+}
+
+body.page-layout.page-contacts .contacts-page__lead code {
+  font-size: 0.82em;
+  padding: 0.08rem 0.28rem;
+  border-radius: 0.25rem;
+  background: color-mix(in srgb, var(--muted-canvas) 90%, var(--input));
+  border: 1px solid color-mix(in srgb, var(--border-light) 88%, transparent);
+}
+
+body.page-layout.page-contacts .contacts-page__address {
+  margin: 0 0 1.35rem;
+}
+
+body.page-layout.page-contacts .contacts-page__address-line {
+  margin: 0.55rem 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--c-wine) 96%, var(--c-ink));
+}
+
+body.page-layout.page-contacts .contacts-page__figure {
+  margin: 0;
+  max-width: 100%;
+}
+
+body.page-layout.page-contacts .contacts-page__map-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--border-light) 92%, var(--border-warm-medium));
+  box-shadow: var(--ix-card-shadow);
+}
+
+body.page-layout.page-contacts .contacts-page__map-caption {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--c-wine);
+}
+
+body.page-layout.page-contacts .contacts-page__map-caption code {
+  font-size: 0.88em;
+}
+
+body.page-layout.page-contacts .contacts-page__form .text-field,
+body.page-layout.page-contacts .contacts-page__form textarea.text-field {
+  width: 100%;
+  max-width: min(30rem, 100%);
+  padding: 0.52rem 0.68rem;
+  border-radius: 0.5rem;
+}
+
+body.page-layout.page-contacts .contacts-page__form p {
+  margin: 0.85rem 0;
+}
+
+body.page-layout.page-contacts .contacts-page__form > p > label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--c-ink);
+}
+
+body.page-layout.page-contacts .contacts-page__submit-row {
+  margin-top: 1.25rem;
+  padding-top: 1.05rem;
+  border-top: 1px dashed color-mix(in srgb, var(--border-warm-medium) 82%, transparent);
+}
+
+body.page-layout.page-contacts .contacts-page__submit-row .btn {
+  border-radius: 999px;
+  padding: 0.52rem 1.65rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+body.page-layout .index-how {
+  margin-bottom: var(--ix-section-gap);
+  padding: 1.45rem 1.45rem 1.55rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-table);
+  background: linear-gradient(180deg, var(--muted-background) 0%, var(--input) 72%);
+  box-shadow: var(--ix-card-shadow);
+}
+
+body.page-layout .index-how .index-section-title {
+  margin-bottom: 1rem;
+}
+
+body.page-layout .index-how__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: ix-how;
+}
+
+body.page-layout .index-how__step {
+  position: relative;
+  counter-increment: ix-how;
+  margin: 0 0 1.15rem;
+  padding: 0.45rem 0 1.15rem 3.35rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--ix-border) 82%, transparent);
+  font-size: 0.88rem;
+  line-height: 1.58;
+  color: var(--c-wine);
+}
+
+body.page-layout .index-how__step:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+body.page-layout .index-how__step::before {
+  content: counter(ix-how);
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 2.35rem;
+  height: 2.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ui);
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: var(--c-ink);
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--c-blush) 58%, #fff),
+    #fff
+  );
+  border: 1px solid color-mix(in srgb, var(--ix-border) 95%, transparent);
+  border-radius: 0.65rem;
+  box-shadow: 0 3px 10px color-mix(in srgb, var(--foreground) 8%, transparent);
+}
+
+body.page-layout .index-how__step-title {
+  display: block;
+  margin-bottom: 0.28rem;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--c-ink);
+  letter-spacing: -0.02em;
+}
+
+body.page-layout .index-how__step a {
+  color: var(--c-rose);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--c-rose) 45%, transparent);
+}
+
+body.page-layout .index-how__step a:hover {
+  color: var(--primary-hover);
+  border-bottom-color: var(--primary-hover);
+}
+
+body.page-layout .index-trust {
+  margin-bottom: 0;
+  padding: 1.5rem 1.45rem 1.6rem;
+  border-radius: 1rem;
+  border: 1px solid color-mix(in srgb, var(--border-warm-medium) 92%, var(--border-blue-gray));
+  background: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--toast-bg) 95%, var(--warm-bg)) 0%,
+    var(--secondary-background) 100%
+  );
+  box-shadow: var(--ix-card-shadow);
+}
+
+body.page-layout .index-trust .index-section-title--flat {
+  padding-bottom: 0.85rem;
+}
+
+body.page-layout .index-section-title--flat {
+  margin-top: 0;
+  padding-bottom: 0.65rem;
+  border-bottom: none;
+}
+
+body.page-layout .index-trust__cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem 1.75rem;
+}
+
+body.page-layout .index-trust__p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.58;
+  color: var(--c-wine);
+}
+
+body.page-layout .index-trust__inline-link {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--c-rose);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--c-rose) 45%, transparent);
+}
+
+body.page-layout .index-trust__inline-link:hover {
+  color: var(--primary-hover);
+  border-bottom-color: var(--primary-hover);
+}
+
+@media (max-width: 44rem) {
+  body.page-layout .index-trust__cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.page-layout .index-section-title {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--c-ink);
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--ix-border);
+}
+
+/* Підвал головної — лише рядок копірайту */
+body.page-layout .site-footer--index {
+  margin-top: auto;
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  flex-shrink: 0;
+  border-top: 2px solid color-mix(in srgb, var(--primary) 42%, var(--border-warm));
+  background: transparent;
+  box-shadow: none;
+}
+
+body.page-layout .site-footer--index__inner {
+  max-width: var(--ix-content-max);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: clamp(1.1rem, 2.5vw, 1.35rem) clamp(1.1rem, 2.5vw, 1.5rem);
+  text-align: center;
+}
+
+body.page-layout .site-footer--index__copy {
+  margin: 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: var(--disabled-foreground);
+  line-height: 1.45;
+}
+
+@media (max-width: 48rem) {
+  body.page-layout {
+    flex-direction: column;
+  }
+
+  body.page-layout .index-sidebar {
+    flex: 0 0 auto;
+    align-self: stretch;
+    width: 100%;
+    min-height: 0;
+    border-right: none;
+    border-bottom: 1px solid var(--ix-sidebar-border);
+    padding: 0;
+  }
+
+  body.page-layout .index-sidebar__inner {
+    position: sticky;
+    top: 0;
+    max-height: none;
+    overflow: visible;
+    padding: 1rem 1rem 1.1rem;
+  }
+
+  body.page-layout .site-nav--sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  body.page-layout .site-nav--sidebar .nav-tile {
+    flex: 1 1 calc(50% - 0.25rem);
+    min-width: 8.5rem;
+  }
+
+  body.page-layout .site-nav--sidebar .nav-tile:hover,
+  body.page-layout .site-nav--sidebar .nav-tile:focus-visible {
+    transform: none;
+  }
+
+  body.page-layout .site-nav--sidebar .nav-tile[aria-current="page"] {
+    box-shadow: inset 0 3px 0 0 var(--primary);
+  }
+}
+
+@media (max-width: 32rem) {
+  body.page-layout .site-nav--sidebar .nav-tile {
+    flex: 1 1 100%;
+  }
+
+  body.page-layout .index-bento {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lucide-inline {
+  vertical-align: -0.2em;
+}
+
+/* --- Внутрішні сторінки з body.page-layout (той самий каркас, що й головна) --- */
+body.page-layout .index-top-header--minimal {
+  height: var(--index-header-height);
+  min-height: var(--index-header-height);
+  max-height: var(--index-header-height);
+}
+
+body.page-layout .index-top-header--minimal .index-top-header__inner {
+  padding: 0 1rem;
+  text-align: center;
+}
+
+body.page-layout .index-top-header__crumb {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--secondary-foreground);
+  text-decoration: none;
+}
+
+body.page-layout .index-top-header--minimal .index-top-header__crumb {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 0.12rem;
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--c-ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.page-layout .index-top-header__crumb:hover,
+body.page-layout .index-top-header__crumb:focus-visible {
+  color: var(--primary);
+  outline: none;
+}
+
+body.page-layout .articles-listing .article-preview__title a {
+  font-family: var(--font-display);
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 2px solid color-mix(in srgb, var(--primary) 42%, transparent);
+  display: inline;
+}
+
+body.page-layout .articles-listing .article-preview__title a:hover,
+body.page-layout .articles-listing .article-preview__title a:focus-visible {
+  color: var(--primary-hover);
+  border-bottom-color: var(--primary-hover);
+}
+
+body.page-layout .article-preview__excerpt {
+  background-color: color-mix(in srgb, var(--warm-bg) 88%, var(--input));
+  border: 1px solid var(--border-light);
+}
+
+/* Сторінка списку статей — картки-сітка як на головній */
+body.page-layout .articles-listing__lead {
+  margin: 0 0 var(--ix-section-gap);
+}
+
+body.page-layout .articles-listing__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.15rem;
+  margin-bottom: var(--ix-section-gap);
+}
+
+/* Сторінка статей: «Швидкі теми» на всю ширину колонки + три картки в ряд на широкому екрані */
+body.page-layout.page-articles .articles-listing__quick-topics {
+  /* секція має клас index-bento — скидаємо сітку обгортки, лишаємо сітку лише на внутрішньому div */
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  box-sizing: border-box;
+  width: calc(100% + 2 * var(--ix-main-padding-x));
+  max-width: none;
+  margin-left: calc(-1 * var(--ix-main-padding-x));
+  margin-right: calc(-1 * var(--ix-main-padding-x));
+  /* один горизонтальний відступ для заголовка й сітки — як у решти контенту main */
+  padding-inline: var(--ix-main-padding-x);
+}
+
+body.page-layout.page-articles .articles-listing__quick-topics > .index-section-title {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+body.page-layout.page-articles .articles-listing__quick-topics .index-bento {
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body.page-layout.page-articles .articles-listing__quick-topics .index-bento .index-bento__item--wide {
+  grid-column: auto;
+}
+
+@media (max-width: 56rem) {
+  body.page-layout.page-articles .articles-listing__quick-topics .index-bento {
+    grid-template-columns: 1fr;
+  }
+}
+
+body.page-layout .article-preview--card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 1.2rem 1.15rem 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-light);
+  background: linear-gradient(
+    165deg,
+    var(--muted-canvas) 0%,
+    color-mix(in srgb, var(--input) 92%, var(--muted-canvas)) 58%
+  );
+  box-shadow: var(--ix-card-shadow);
+  box-sizing: border-box;
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+body.page-layout .article-preview--card:hover {
+  border-color: color-mix(in srgb, var(--primary) 32%, var(--border-warm));
+  box-shadow: var(--ix-card-shadow-strong);
+  transform: translateY(-2px);
+}
+
+body.page-layout .article-preview__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.55rem;
+  height: 2.55rem;
+  margin-bottom: 0.6rem;
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--primary) 9%, var(--page-bg));
+  border: 1px solid color-mix(in srgb, var(--primary) 14%, var(--border-warm));
+  color: var(--primary);
+}
+
+body.page-layout .article-preview__icon svg {
+  flex-shrink: 0;
+}
+
+body.page-layout .article-preview__meta {
+  margin: 0 0 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary-foreground);
+}
+
+body.page-layout .article-preview--card .article-preview__title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(0.98rem, 2vw, 1.06rem);
+  line-height: 1.3;
+}
+
+body.page-layout .article-preview--card .article-preview__title a {
+  border-bottom: none;
+  text-decoration: none;
+}
+
+body.page-layout .article-preview--card .article-preview__title a:hover,
+body.page-layout .article-preview--card .article-preview__title a:focus-visible {
+  color: var(--primary-hover);
+}
+
+body.page-layout .article-preview--card .article-preview__excerpt {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.86rem;
+  line-height: 1.52;
+  border-radius: 0.65rem;
+}
+
+body.page-layout .article-preview__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+body.page-layout .article-preview__tag {
+  display: inline-block;
+  padding: 0.22rem 0.48rem;
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--c-wine);
+  background: color-mix(in srgb, var(--tag-warm-bg) 88%, var(--page-bg));
+  border-radius: 999px;
+  border: 1px solid var(--border-light);
+}
+
+body.page-layout .article-preview__actions {
+  margin: 0;
+}
+
+body.page-layout .article-preview__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 1rem;
+  margin-top: auto;
+  padding-top: 0.85rem;
+}
+
+body.page-layout .article-preview__footer .read-more {
+  font-size: 0.84rem;
+}
+
+body.page-layout .article-preview__footer .to-comments {
+  font-size: 0.8rem;
+}
+
+body.page-layout .article-preview__footer .article-preview__actions {
+  margin: 0;
+}
+
+body.page-layout .read-more {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+body.page-layout .read-more:hover,
+body.page-layout .read-more:focus-visible {
+  color: var(--primary-hover);
+}
+
+body.page-layout .article-single__h1 {
+  font-family: var(--font-display);
+  color: var(--foreground);
+}
+
+/* Сторінка статті — блоки як на головній (intro / bento / highlight) */
+body.page-layout .article-page__hero .article-single__h1 {
+  text-align: left;
+  margin-bottom: 0.65rem;
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
+}
+
+body.page-layout .article-page__dek {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.58;
+  font-weight: 500;
+  color: var(--c-wine);
+}
+
+body.page-layout .article-page .index-intro .index-intro__text,
+body.page-layout .article-page .index-intro p {
+  text-align: left;
+}
+
+body.page-layout .article-page .index-intro p::first-letter {
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  color: inherit;
+  padding: 0;
+  line-height: inherit;
+}
+
+body.page-layout .article-page .article-comments.index-intro {
+  margin-bottom: 0;
+}
+
+body.page-layout .article-page .article-comments .index-section-title {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+body.page-layout .article-comments h2 {
+  border-top-color: var(--border-light);
+}
+
+body.page-layout .article-page .article-comments h2.index-section-title {
+  border-top: none;
+}
+
+body.page-layout .comment {
+  background: var(--secondary-background);
+  border-left-color: var(--primary);
+}
+
+body.page-layout .catalog-categories > li {
+  background-color: color-mix(in srgb, var(--tag-warm-bg) 55%, var(--input));
+  border: 1px solid var(--border-light);
+}
+
+body.page-layout .catalog-subcategories {
+  background-color: color-mix(in srgb, var(--muted-canvas) 95%, var(--input));
+  border: 1px solid var(--border-subtle);
+}
+
+body.page-layout .form-register .text-field,
+body.page-layout .form-contact .text-field {
+  border: 1px solid var(--input-border);
+  border-radius: 0.35rem;
+  background: var(--input);
+}
+
+body.page-layout .form-register .text-field--email:focus {
+  background-color: color-mix(in srgb, var(--info-badge-bg) 40%, var(--input));
+  color: var(--foreground);
+}
+
+body.page-layout .btn {
+  border-color: var(--border-medium);
+}
+
+body.page-layout .btn--submit {
+  background: var(--primary);
+  color: var(--input);
+  border-color: color-mix(in srgb, var(--primary) 75%, var(--foreground));
+}
+
+body.page-layout .btn--submit:active {
+  background: var(--primary-hover);
+  color: var(--input);
+}
+
+body.page-layout .btn--reset {
+  background: var(--secondary-foreground);
+  color: var(--input);
+  border-color: var(--border-medium);
+}
+
+body.page-layout .btn--reset:active {
+  background: var(--gray-700);
+}
+
+body.page-layout .form-register__field {
+  border-color: var(--border-light);
+  background: color-mix(in srgb, var(--muted-background) 70%, var(--input));
+}
+
+body.page-layout .map-image {
+  border-color: var(--border-light);
+  border-radius: 0.4rem;
+}
+
+/* === п.3 Сторінка «Статті» (список) — легасі без layout === */
+.articles-listing h1 {
+  font-family: var(--font-display);
+  color: #2a1a0e;
+}
+
+.article-preview {
+  margin-bottom: 2rem;
+}
+
+/* Заголовок = посилання: інший колір ніж у звичайних лінків, без підкреслення, лише border-bottom */
+.article-preview__title a {
+  font-family: var(--font-display);
+  color: var(--link-article);
+  text-decoration: none;
+  border-bottom: 2px solid #8b7355;
+  display: inline;
+}
+
+.article-preview__title a:hover,
+.article-preview__title a:focus-visible {
+  color: #0c2138;
+  border-bottom-color: #0c2138;
+}
+
+/* Короткий зміст — фон */
+.article-preview__excerpt {
+  background-color: var(--excerpt-bg);
+  padding: 0.6rem 0.75rem;
+  border-radius: 4px;
+}
+
+/* читати далі */
+.read-more {
+  color: var(--read-more);
+  text-decoration: underline;
+}
+
+.read-more:hover,
+.read-more:focus-visible {
+  text-decoration: none;
+  color: #0842a3;
+}
+
+/* Перейти до коментарів — сірий */
+.to-comments {
+  color: var(--comments-link);
+  text-decoration: underline;
+}
+
+/* === п.4 Сторінка однієї статті: заголовок по центру, перша літера абзацу === */
+.article-single__h1 {
+  text-align: center;
+  font-family: var(--font-display);
+  color: #2a1a0e;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+.article-single p {
+  text-align: justify;
+}
+
+.article-single p::first-letter {
+  font-family: var(--font-display);
+  font-size: 2.1em;
+  line-height: 0.9;
+  color: #7a2e0f;
+  font-weight: 600;
+  padding-right: 0.1em;
+}
+
+.article-comments h2 {
+  font-size: 1.15rem;
+  border-top: 1px solid #c9bfb4;
+  padding-top: 1rem;
+  margin-top: 2.5rem;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comment {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.65rem;
+  background: #f0ebe4;
+  border-left: 3px solid #8b7355;
+}
+
+/* === п.5 Каталог: маркери, шрифти, фони, ширина, new === */
+.catalog-wrap {
+  max-width: 32rem;
+}
+
+.catalog-categories {
+  list-style-image: url("../images/marker-category.svg");
+  margin: 0;
+  padding-left: 1.6rem;
+}
+
+.catalog-categories > li {
+  margin-bottom: 0.9rem;
+  background-color: #e6dccf;
+  padding: 0.5rem 0.6rem 0.65rem 0.5rem;
+  border-radius: 4px;
+}
+
+.category-label {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.catalog-subcategories {
+  list-style-image: url("../images/marker-subcategory.svg");
+  margin: 0.25rem 0 0;
+  padding: 0.4rem 0.5rem 0.4rem 1.5rem;
+  background-color: #dce8df;
+  font-size: 0.92rem;
+  border-radius: 3px;
+  list-style-position: outside;
+}
+
+.catalog-subcategories li {
+  margin-bottom: 0.2rem;
+}
+
+.catalog-categories .is-new::after,
+.catalog-subcategories .is-new::after {
+  content: " new";
+  color: #666;
+  font-size: 0.85em;
+  font-weight: 600;
+}
+
+/* === п.7 Реєстрація: ширина полів, email :focus, кнопки :active, checkbox/radio hover === */
+.form-register label,
+.form-contact label,
+.form-register legend {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.form-register p,
+.form-contact p {
+  margin: 0.75rem 0;
+}
+
+/* Одна ширина для «стандартних» полів, інша — для пароля */
+.form-register .text-field,
+.form-contact .text-field {
+  width: 280px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.4rem 0.5rem;
+  font: inherit;
+}
+
+.form-register .text-field--password {
+  width: 160px;
+}
+
+/* Email: зміна тла й кольору шрифту у фокусі */
+.form-register .text-field--email:focus {
+  background-color: #d9edf7;
+  color: #0a2540;
+  outline: none;
+}
+
+/* Кнопки: різні кольори у :active */
+.btn {
+  padding: 0.45rem 1rem;
+  font: inherit;
+  border: 1px solid #888;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn--submit {
+  background: #2d6a3e;
+  color: #fff;
+  border-color: #1d4a2a;
+}
+
+.btn--submit:active {
+  background: #0f3d1c;
+  color: #e8ffe8;
+}
+
+.btn--reset {
+  background: #6c5a4a;
+  color: #fff;
+  border-color: #4a3a2a;
+}
+
+.btn--reset:active {
+  background: #8b3a2a;
+  color: #fff;
+}
+
+/* Додатково: переривчаста рамка навколо checkbox / radio при наведенні */
+.form-register input[type="checkbox"]:hover,
+.form-register input[type="radio"]:hover {
+  outline: 2px dashed #555;
+  outline-offset: 3px;
+}
+
+.form-register__field {
+  margin: 0.9rem 0;
+  border: 1px solid #c9bfb4;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+}
+
+.form-register__field label {
+  display: inline;
+  font-weight: normal;
+  margin-right: 0.9rem;
+}
+
+.form-register__buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Підказка: кожне слово з великої; точне виправлення — у JS після blur */
+.js-title-case {
+  text-transform: capitalize;
+}
+
+/* Контакти: карта */
+.map-figure {
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
+.map-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #c9bfb4;
+}
+
+/* Форма зворотного зв'язку — ті ж базові .text-field */

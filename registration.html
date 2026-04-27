@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="uk" class="page-site-root">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Реєстрація — StylKrok</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-layout page-registration">
+    <aside class="index-sidebar" aria-label="Навігація по розділах">
+      <div class="index-sidebar__inner">
+        <a class="index-sidebar__brand logo logo--index" href="index.html">
+          <i data-lucide="shopping-bag" class="logo__mark" width="26" height="26" aria-hidden="true"></i>
+          <span>StylKrok</span>
+        </a>
+        <p class="index-sidebar__tagline">взуття · одяг · аксесуари</p>
+
+        <h2 class="index-sidebar__title">Меню</h2>
+        <nav class="site-nav site-nav--icons site-nav--sidebar" aria-label="Головна навігація">
+          <a class="nav-tile" href="index.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="home" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Головна</span>
+          </a>
+          <a class="nav-tile" href="articles.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="newspaper" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Статті</span>
+          </a>
+          <a class="nav-tile" href="catalog.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="layout-grid" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Каталог</span>
+          </a>
+          <a class="nav-tile" href="gallery.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="images" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Галерея</span>
+          </a>
+          <a class="nav-tile" href="registration.html" aria-current="page">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="user-plus" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Реєстрація</span>
+          </a>
+          <a class="nav-tile" href="contacts.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="map-pin" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Контакти</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="index-content">
+      <div class="index-feed">
+        <header class="index-top-header" aria-label="Page header">
+          <div class="index-top-header__pattern" aria-hidden="true"></div>
+          <div class="index-top-header__inner">
+            <p class="index-top-header__eyebrow">Curated for the city</p>
+            <h1 class="index-top-header__title">Registration</h1>
+            <p class="index-top-header__sub">Account &amp; orders</p>
+            <div class="index-top-header__line" aria-hidden="true"></div>
+          </div>
+        </header>
+
+        <main class="site-main site-main--index registration-page" id="main">
+          <section class="index-intro registration-page__intro" aria-labelledby="reg-intro-title">
+            <h2 class="index-intro__title" id="reg-intro-title">Реєстрація в StylKrok</h2>
+            <p class="index-intro__text">
+              Створіть акаунт, щоб зберігати замовлення, відстежувати відправлення й отримувати підказки щодо розміру й догляду за матеріалами.
+            </p>
+            <p class="index-intro__text index-intro__text--follow">
+              Якщо потрібна допомога до відправки форми — напишіть на <a href="contacts.html">сторінку контактів</a>.
+            </p>
+          </section>
+
+          <section class="registration-page__shell" aria-labelledby="reg-form-title">
+            <h2 class="index-section-title registration-page__form-title" id="reg-form-title">Анкета</h2>
+            <p class="registration-page__lead">
+              Поля з позначкою обов’язковості браузером перевіряються перед відправленням; пароль і email потрібні для входу в кабінет (навчальний приклад).
+            </p>
+
+            <form class="form-register registration-page__form" action="#" method="get">
+              <p>
+                <label for="lastName">Прізвище</label>
+                <input class="text-field js-title-case" type="text" id="lastName" name="lastName" required />
+              </p>
+              <p>
+                <label for="firstName">Ім’я</label>
+                <input class="text-field js-title-case" type="text" id="firstName" name="firstName" required />
+              </p>
+              <p>
+                <label for="reg-email">Адреса електронної пошти</label>
+                <input class="text-field text-field--email" type="email" id="reg-email" name="email" required />
+              </p>
+              <p>
+                <label for="reg-password">Пароль</label>
+                <input class="text-field text-field--password" type="password" id="reg-password" name="password" required />
+              </p>
+              <p>
+                <label for="siteurl">Адреса вашого сайту</label>
+                <input class="text-field" type="url" id="siteurl" name="siteurl" value="http://" placeholder="http://" />
+              </p>
+              <fieldset class="form-register__field">
+                <legend>Стать</legend>
+                <label><input type="radio" name="gender" value="female" /> жіноча</label>
+                <label><input type="radio" name="gender" value="male" /> чоловіча</label>
+                <label><input type="radio" name="gender" value="other" checked /> не вказую</label>
+              </fieldset>
+              <p>
+                <label for="bdate">Дата народження</label>
+                <input class="text-field" type="date" id="bdate" name="birth" />
+              </p>
+              <fieldset class="form-register__field">
+                <legend>Яким стилям одягу віддаєте перевагу? (кілька варіантів)</legend>
+                <label><input type="checkbox" name="style" value="casual" /> casual</label>
+                <label><input type="checkbox" name="style" value="office" checked /> діловий / smart casual</label>
+                <label><input type="checkbox" name="style" value="sport" /> спорт / streetwear</label>
+              </fieldset>
+              <fieldset class="form-register__field">
+                <legend>Основний фокус покупок</legend>
+                <label><input type="radio" name="focus" value="shoes" checked /> взуття</label>
+                <label><input type="radio" name="focus" value="clothes" /> одяг</label>
+              </fieldset>
+              <p>
+                <label for="about">Про себе (довільна форма)</label>
+                <textarea class="text-field" id="about" name="about" rows="4" cols="40"></textarea>
+              </p>
+              <p class="form-register__buttons">
+                <button class="btn btn--submit" type="submit">Зареєструватися</button>
+                <button class="btn btn--reset" type="reset">Очистити форму</button>
+              </p>
+            </form>
+          </section>
+        </main>
+
+        <footer class="site-footer site-footer--index" role="contentinfo">
+          <div class="site-footer--index__inner">
+            <p class="site-footer--index__copy">&copy; 2025 StylKrok. Всі права захищені.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

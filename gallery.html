@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="uk" class="page-site-root">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Галерея — StylKrok</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="page-layout page-gallery">
+    <aside class="index-sidebar" aria-label="Навігація по розділах">
+      <div class="index-sidebar__inner">
+        <a class="index-sidebar__brand logo logo--index" href="index.html">
+          <i data-lucide="shopping-bag" class="logo__mark" width="26" height="26" aria-hidden="true"></i>
+          <span>StylKrok</span>
+        </a>
+        <p class="index-sidebar__tagline">взуття · одяг · аксесуари</p>
+
+        <h2 class="index-sidebar__title">Меню</h2>
+        <nav class="site-nav site-nav--icons site-nav--sidebar" aria-label="Головна навігація">
+          <a class="nav-tile" href="index.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="home" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Головна</span>
+          </a>
+          <a class="nav-tile" href="articles.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="newspaper" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Статті</span>
+          </a>
+          <a class="nav-tile" href="catalog.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="layout-grid" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Каталог</span>
+          </a>
+          <a class="nav-tile" href="gallery.html" aria-current="page">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="images" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Галерея</span>
+          </a>
+          <a class="nav-tile" href="registration.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="user-plus" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Реєстрація</span>
+          </a>
+          <a class="nav-tile" href="contacts.html">
+            <span class="nav-tile__icon" aria-hidden="true"><i data-lucide="map-pin" width="20" height="20"></i></span>
+            <span class="nav-tile__label">Контакти</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="index-content">
+      <div class="index-feed">
+        <header class="index-top-header" aria-label="Page header">
+          <div class="index-top-header__pattern" aria-hidden="true"></div>
+          <div class="index-top-header__inner">
+            <p class="index-top-header__eyebrow">Curated for the city</p>
+            <h1 class="index-top-header__title">Gallery</h1>
+            <p class="index-top-header__sub">Image previews in one grid</p>
+            <div class="index-top-header__line" aria-hidden="true"></div>
+          </div>
+        </header>
+
+        <main class="site-main site-main--index gallery-page" id="main">
+          <section class="index-intro gallery-page__intro" aria-labelledby="gallery-intro-title">
+            <h2 class="index-intro__title" id="gallery-intro-title">Галерея прев’ю</h2>
+            <p class="index-intro__text">
+              Фото товарів у різних форматах файлів — зручно звірити текстуру верху й контраст підошви на екрані.
+              Клік по картці відкриває зображення повним розміром у новій вкладці.
+            </p>
+            <p class="index-intro__text index-intro__text--follow">
+              Опис і розмірну сітку дивіться в <a href="catalog.html">каталозі</a>; поради з підбору розміру — у
+              <a href="articles.html">статтях</a>.
+            </p>
+
+            <div class="gallery-page__grid" role="list">
+              <a
+                class="gallery-page__card"
+                role="listitem"
+                href="images/gallery-1.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="gallery-page__thumb">
+                  <img src="images/gallery-1.jpg" width="400" height="300" alt="Кросівки, JPEG" loading="lazy" decoding="async" />
+                  <span class="gallery-page__badge">.jpg</span>
+                </span>
+                <span class="gallery-page__caption">Кросівки · JPEG</span>
+              </a>
+              <a
+                class="gallery-page__card"
+                role="listitem"
+                href="images/gallery-2.png"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="gallery-page__thumb">
+                  <img src="images/gallery-2.png" width="400" height="300" alt="Черевики, PNG" loading="lazy" decoding="async" />
+                  <span class="gallery-page__badge">.png</span>
+                </span>
+                <span class="gallery-page__caption">Черевики · PNG</span>
+              </a>
+              <a
+                class="gallery-page__card"
+                role="listitem"
+                href="images/gallery-3.gif"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="gallery-page__thumb">
+                  <img src="images/gallery-3.gif" width="400" height="300" alt="Сумка, GIF" loading="lazy" decoding="async" />
+                  <span class="gallery-page__badge">.gif</span>
+                </span>
+                <span class="gallery-page__caption">Сумка · GIF</span>
+              </a>
+              <a
+                class="gallery-page__card"
+                role="listitem"
+                href="images/gallery-4.webp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="gallery-page__thumb">
+                  <img src="images/gallery-4.webp" width="400" height="300" alt="Сорочка, WebP" loading="lazy" decoding="async" />
+                  <span class="gallery-page__badge">.webp</span>
+                </span>
+                <span class="gallery-page__caption">Сорочка · WebP</span>
+              </a>
+            </div>
+          </section>
+        </main>
+
+        <footer class="site-footer site-footer--index" role="contentinfo">
+          <div class="site-footer--index__inner">
+            <p class="site-footer--index__copy">&copy; 2025 StylKrok. Всі права захищені.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
