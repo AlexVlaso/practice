@@ -1039,6 +1039,9 @@ body.page-layout.page-catalog .catalog-page__intro .catalog-card__tag {
 
 body.page-layout.page-catalog .catalog-simple {
   margin-bottom: var(--ix-section-gap);
+  max-width: min(40rem, 100%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body.page-layout.page-catalog .catalog-simple__list {
@@ -2066,13 +2069,17 @@ body.page-layout .article-preview--card .article-preview__title {
 }
 
 body.page-layout .article-preview--card .article-preview__title a {
-  border-bottom: none;
+  font-family: var(--font-display);
+  color: var(--primary);
   text-decoration: none;
+  border-bottom: 2px solid color-mix(in srgb, var(--primary) 42%, transparent);
+  display: inline;
 }
 
 body.page-layout .article-preview--card .article-preview__title a:hover,
 body.page-layout .article-preview--card .article-preview__title a:focus-visible {
   color: var(--primary-hover);
+  border-bottom-color: var(--primary-hover);
 }
 
 body.page-layout .article-preview--card .article-preview__excerpt {
