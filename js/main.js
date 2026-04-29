@@ -1,4 +1,3 @@
-/* Lucide: відмалювати data-lucide */
 document.addEventListener("DOMContentLoaded", function () {
   if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
     lucide.createIcons();
@@ -12,6 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.querySelectorAll(".js-title-case").forEach(function (input) {
+    function applyTitleCaseLive() {
+      input.value = titleCaseWords(input.value);
+    }
+
+    input.addEventListener("input", function () {
+      applyTitleCaseLive();
+    });
+
     input.addEventListener("blur", function () {
       input.value = titleCaseWords(input.value.trim());
     });

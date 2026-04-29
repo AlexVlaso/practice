@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <title>Каталог — StylKrok</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="page-layout page-catalog">
     <aside class="index-sidebar" aria-label="Навігація по розділах">
@@ -55,6 +55,9 @@
       <div class="index-feed">
         <header class="index-top-header" aria-label="Page header">
           <div class="index-top-header__pattern" aria-hidden="true"></div>
+          <div class="index-top-header__corner" aria-hidden="true">
+            <img src="images/decor-corner.png" alt="" width="180" height="180" decoding="async" />
+          </div>
           <div class="index-top-header__inner">
             <p class="index-top-header__eyebrow">Curated for the city</p>
             <h1 class="index-top-header__title">Catalog</h1>
@@ -64,114 +67,179 @@
         </header>
 
         <main class="site-main site-main--index catalog-page" id="main">
-          <div class="catalog-page__grid" role="region" aria-label="Розділи каталогу">
-            <article class="catalog-card catalog-card--shoes">
-              <header class="catalog-card__head">
-                <span class="catalog-card__icon" aria-hidden="true"><i data-lucide="footprints" width="22" height="22"></i></span>
-                <h3 class="catalog-card__title">Взуття</h3>
-              </header>
-              <ul class="catalog-card__subs">
-                <li>Кросівки та кеди</li>
-                <li>Сандалі та шльопанці</li>
-                <li class="catalog-card__item--new">
-                  Черевики й ботильйони <span class="catalog-card__tag">new</span>
-                </li>
-              </ul>
-            </article>
+          <section class="index-intro catalog-page__intro" aria-labelledby="catalog-intro-title">
+            <h2 class="index-intro__title" id="catalog-intro-title">Каталог StylKrok</h2>
+            <p class="index-intro__text">
+              Категорії та підкатегорії у вигляді списку. Іконки допомагають швидко орієнтуватися; позначка
+              <span class="catalog-card__tag">new</span> — для нових розділів.
+            </p>
+            <p class="index-intro__text index-intro__text--follow">
+              Докладні гіди з підбору розміру та догляду — у розділі <a href="articles.html">Статті</a>.
+            </p>
+          </section>
 
-            <article class="catalog-card catalog-card--apparel">
-              <header class="catalog-card__head">
-                <span class="catalog-card__icon" aria-hidden="true"><i data-lucide="shirt" width="22" height="22"></i></span>
-                <h3 class="catalog-card__title">
-                  Одяг <span class="catalog-card__tag">new</span>
-                </h3>
-              </header>
-              <ul class="catalog-card__subs">
-                <li>Верхній одяг</li>
-                <li class="catalog-card__item--new">
-                  Сорочки та футболки <span class="catalog-card__tag">new</span>
-                </li>
-                <li>Светри та худі</li>
-              </ul>
-            </article>
-
-            <article class="catalog-card catalog-card--accessories">
-              <header class="catalog-card__head">
-                <span class="catalog-card__icon" aria-hidden="true"><i data-lucide="watch" width="22" height="22"></i></span>
-                <h3 class="catalog-card__title">Аксесуари</h3>
-              </header>
-              <ul class="catalog-card__subs">
-                <li class="catalog-card__item--new">
-                  Сумки та рюкзаки <span class="catalog-card__tag">new</span>
-                </li>
-                <li>Шарфи, рукавички, головні убори</li>
-                <li>Ремені та гаманці</li>
-              </ul>
-            </article>
-
-            <article class="catalog-card catalog-card--kids">
-              <header class="catalog-card__head">
-                <span class="catalog-card__icon" aria-hidden="true"><i data-lucide="baby" width="22" height="22"></i></span>
-                <h3 class="catalog-card__title">Дитяче</h3>
-              </header>
-              <ul class="catalog-card__subs">
-                <li>Взуття 21–36</li>
-                <li class="catalog-card__item--new">
-                  Шкільна форма <span class="catalog-card__tag">new</span>
-                </li>
-                <li>Іграшки та дрібниці</li>
-              </ul>
-            </article>
-
-            <article class="catalog-card catalog-card--sport">
-              <header class="catalog-card__head">
-                <span class="catalog-card__icon" aria-hidden="true"><i data-lucide="activity" width="22" height="22"></i></span>
-                <h3 class="catalog-card__title">Спорт і актив</h3>
-              </header>
-              <ul class="catalog-card__subs">
-                <li>Біг та зал</li>
-                <li>Похідне та термошари</li>
-                <li>Велосипед і скейт</li>
-              </ul>
-            </article>
-
-            <article class="catalog-card catalog-card--home">
-              <header class="catalog-card__head">
-                <span class="catalog-card__icon" aria-hidden="true"><i data-lucide="package" width="22" height="22"></i></span>
-                <h3 class="catalog-card__title">Текстиль для дому</h3>
-              </header>
-              <ul class="catalog-card__subs">
-                <li>Шкарпетки та колготи</li>
-                <li>Піжами та халати</li>
-                <li>Домашні тапочки</li>
-              </ul>
-            </article>
-
-            <article class="catalog-card catalog-card--care">
-              <header class="catalog-card__head">
-                <span class="catalog-card__icon" aria-hidden="true"><i data-lucide="sparkles" width="22" height="22"></i></span>
-                <h3 class="catalog-card__title">Догляд</h3>
-              </header>
-              <ul class="catalog-card__subs">
-                <li>Спреї та креми для взуття</li>
-                <li>Щітки, шнурки, устілки</li>
-                <li>Чохли та зберігання</li>
-              </ul>
-            </article>
-
-            <article class="catalog-card catalog-card--drops">
-              <header class="catalog-card__head">
-                <span class="catalog-card__icon" aria-hidden="true"><i data-lucide="star" width="22" height="22"></i></span>
-                <h3 class="catalog-card__title">Обмежені дропи</h3>
-              </header>
-              <ul class="catalog-card__subs">
-                <li>Колаборації з брендами</li>
-                <li class="catalog-card__item--new">
-                  Преміум-лінії <span class="catalog-card__tag">new</span>
-                </li>
-              </ul>
-            </article>
-          </div>
+          <nav class="catalog-simple" aria-label="Розділи каталогу">
+            <ul class="catalog-simple__list">
+              <li>
+                <div class="catalog-simple__category">
+                  <span class="catalog-simple__icon" aria-hidden="true"><i data-lucide="footprints" width="22" height="22"></i></span>
+                  <h3 class="catalog-simple__title">Взуття</h3>
+                </div>
+                <ul class="catalog-simple__subs">
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Кросівки та кеди
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Сандалі та шльопанці
+                  </li>
+                  <li class="catalog-simple__sub--new">
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Черевики й ботильйони <span class="catalog-card__tag">new</span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="catalog-simple__category">
+                  <span class="catalog-simple__icon" aria-hidden="true"><i data-lucide="shirt" width="22" height="22"></i></span>
+                  <h3 class="catalog-simple__title">
+                    Одяг <span class="catalog-card__tag">new</span>
+                  </h3>
+                </div>
+                <ul class="catalog-simple__subs">
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Верхній одяг
+                  </li>
+                  <li class="catalog-simple__sub--new">
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Сорочки та футболки <span class="catalog-card__tag">new</span>
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Светри та худі
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="catalog-simple__category">
+                  <span class="catalog-simple__icon" aria-hidden="true"><i data-lucide="watch" width="22" height="22"></i></span>
+                  <h3 class="catalog-simple__title">Аксесуари</h3>
+                </div>
+                <ul class="catalog-simple__subs">
+                  <li class="catalog-simple__sub--new">
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Сумки та рюкзаки <span class="catalog-card__tag">new</span>
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Шарфи, рукавички, головні убори
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Ремені та гаманці
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="catalog-simple__category">
+                  <span class="catalog-simple__icon" aria-hidden="true"><i data-lucide="baby" width="22" height="22"></i></span>
+                  <h3 class="catalog-simple__title">Дитяче</h3>
+                </div>
+                <ul class="catalog-simple__subs">
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Взуття 21–36
+                  </li>
+                  <li class="catalog-simple__sub--new">
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Шкільна форма <span class="catalog-card__tag">new</span>
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Іграшки та дрібниці
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="catalog-simple__category">
+                  <span class="catalog-simple__icon" aria-hidden="true"><i data-lucide="activity" width="22" height="22"></i></span>
+                  <h3 class="catalog-simple__title">Спорт і актив</h3>
+                </div>
+                <ul class="catalog-simple__subs">
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Біг та зал
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Похідне та термошари
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Велосипед і скейт
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="catalog-simple__category">
+                  <span class="catalog-simple__icon" aria-hidden="true"><i data-lucide="package" width="22" height="22"></i></span>
+                  <h3 class="catalog-simple__title">Текстиль для дому</h3>
+                </div>
+                <ul class="catalog-simple__subs">
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Шкарпетки та колготи
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Піжами та халати
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Домашні тапочки
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="catalog-simple__category">
+                  <span class="catalog-simple__icon" aria-hidden="true"><i data-lucide="sparkles" width="22" height="22"></i></span>
+                  <h3 class="catalog-simple__title">Догляд</h3>
+                </div>
+                <ul class="catalog-simple__subs">
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Спреї та креми для взуття
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Щітки, шнурки, устілки
+                  </li>
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Чохли та зберігання
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="catalog-simple__category">
+                  <span class="catalog-simple__icon" aria-hidden="true"><i data-lucide="star" width="22" height="22"></i></span>
+                  <h3 class="catalog-simple__title">Обмежені дропи</h3>
+                </div>
+                <ul class="catalog-simple__subs">
+                  <li>
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Колаборації з брендами
+                  </li>
+                  <li class="catalog-simple__sub--new">
+                    <span class="catalog-simple__sub-icon" aria-hidden="true"><i data-lucide="chevron-right" width="14" height="14"></i></span>
+                    Преміум-лінії <span class="catalog-card__tag">new</span>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </main>
 
         <footer class="site-footer site-footer--index" role="contentinfo">

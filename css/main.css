@@ -1,8 +1,7 @@
-/* === ЛР №2: загальні + п.1 фон (зображення у правому верхньому куті) === */
 html {
   --font-ui: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  /* Палітра StylKrok / референс X (Twitter): */
+
   --c-ink: #1d1a39;
   --c-plum: #451952;
   --c-wine: #662549;
@@ -21,7 +20,7 @@ html {
   --comments-link: #777;
 }
 
-/* Дизайн-система (нейтральні, primary coral, теплі фони — як у макеті) */
+
 :root {
   --light-grey-400: #a1a3a7;
   --dark-grey-100: #141823;
@@ -178,10 +177,6 @@ html {
 
 html {
   background-color: var(--bg);
-  background-image: url("../images/bg-corner.jpg");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 180px auto;
   font-family: var(--font-ui);
   color: var(--text);
   line-height: 1.55;
@@ -196,7 +191,7 @@ body {
   background: transparent;
 }
 
-/* === п.2 Меню: шрифт, колір, фон === */
+
 .site-header {
   padding: 0.75rem 1rem;
   display: flex;
@@ -257,13 +252,13 @@ body {
   margin-top: 0;
 }
 
-/* Головна: маркований список (клас за замовчуванням для інших сторінок) */
+
 .index-links {
   font-size: 1.1rem;
   line-height: 1.8;
 }
 
-/* === Головна: сайдбар + стрічка (палітра з макету: page-bg + primary) === */
+
 html.page-site-root {
   min-height: 100vh;
   background-color: var(--page-bg);
@@ -274,11 +269,12 @@ html.page-site-root {
     var(--page-bg) 100%
   );
   background-repeat: no-repeat;
+  background-position: center;
   background-size: 100% 100%;
 }
 
 body.page-layout {
-  /* Міст до існуючих класів — семантика з дизайн-системи */
+
   --c-ink: var(--foreground);
   --c-plum: var(--gray-700);
   --c-wine: var(--secondary-foreground);
@@ -300,7 +296,7 @@ body.page-layout {
   --ix-border: var(--border-warm);
   --ix-text: var(--foreground);
   --ix-text-secondary: var(--secondary-foreground);
-  /* Центрований текстовий блок у правій колонці (шапка + main + футер) */
+
   --ix-content-max: min(82rem, 100%);
   --ix-section-gap: clamp(2.35rem, 5vw, 3.35rem);
   --ix-main-padding-x: clamp(1.2rem, 2.8vw, 1.75rem);
@@ -317,12 +313,13 @@ body.page-layout {
   align-items: stretch;
   min-height: 100vh;
   margin: 0;
-  background: var(--ix-canvas);
+
+  background: transparent;
   font-family: var(--font-ui);
   color: var(--ix-text);
 }
 
-/* Сайдбар — колонка на всю висоту сторінки (бордер до низу); меню всередині — sticky + скрол */
+
 body.page-layout .index-sidebar {
   flex: 0 0 clamp(15.5rem, 18vw, 18rem);
   width: clamp(15.5rem, 18vw, 18rem);
@@ -409,7 +406,7 @@ body.page-layout .index-sidebar__title {
   border-bottom: 1px solid var(--border-warm-medium);
 }
 
-/* Права колонка: на всю ширину вікна (біля сайдбару); сіре поле на всю площу */
+
 body.page-layout .index-content {
   flex: 1 1 auto;
   min-width: 0;
@@ -418,7 +415,7 @@ body.page-layout .index-content {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  background: var(--ix-canvas);
+  background: transparent;
   border: none;
 }
 
@@ -521,7 +518,7 @@ body.page-layout .site-nav--sidebar .nav-tile[aria-current="page"] .nav-tile__ic
   box-shadow: 0 1px 2px color-mix(in srgb, var(--primary) 30%, transparent);
 }
 
-/* Стрічка контенту — прозора, заливка від html/body */
+
 body.page-layout .index-feed {
   width: 100%;
   min-height: 100vh;
@@ -533,7 +530,7 @@ body.page-layout .index-feed {
   box-shadow: none;
 }
 
-/* Хедер сторінки: sticky + напівпрозорість + blur поверх скролу */
+
 body.page-layout .index-top-header {
   position: sticky;
   top: 0;
@@ -569,9 +566,34 @@ body.page-layout .index-top-header {
   }
 }
 
+
+body.page-layout .index-top-header__corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.45rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+body.page-layout .index-top-header__corner img {
+  height: min(3.15rem, 92%);
+  width: auto;
+  max-width: min(7.5rem, 42vw);
+  object-fit: contain;
+  display: block;
+  opacity: 0.95;
+  filter: drop-shadow(0 1px 3px color-mix(in srgb, var(--foreground) 14%, transparent));
+}
+
 body.page-layout .index-top-header__pattern {
   position: absolute;
   inset: 0;
+  z-index: 1;
   opacity: 0.14;
   background-image:
     radial-gradient(circle at 22% 28%, color-mix(in srgb, var(--primary) 22%, transparent) 0, transparent 48%),
@@ -588,7 +610,7 @@ body.page-layout .index-top-header__pattern {
 
 body.page-layout .index-top-header__inner {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   box-sizing: border-box;
   width: 100%;
   max-width: var(--ix-content-max);
@@ -654,7 +676,7 @@ body.page-layout .site-main--index {
   border: none;
 }
 
-/* Інтро + bento + highlight (новий контент) */
+
 body.page-layout .index-intro {
   margin-bottom: var(--ix-section-gap);
   padding: 1.45rem 1.45rem 1.55rem;
@@ -680,6 +702,122 @@ body.page-layout .index-intro__text {
   font-size: 0.95rem;
   line-height: 1.55;
   color: var(--c-wine);
+}
+
+body.page-layout .index-lab-hub .index-intro__title {
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.65rem;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--c-ink);
+  border-bottom: 1px solid color-mix(in srgb, var(--border-warm-medium) 75%, var(--border-light));
+}
+
+body.page-layout .index-lab-hub__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  counter-reset: lab-hub;
+  border-radius: 0.65rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border-warm-medium) 88%, transparent);
+  background: color-mix(in srgb, var(--input) 94%, var(--muted-canvas));
+  box-shadow: inset 0 1px 0 color-mix(in srgb, #fff 70%, transparent);
+}
+
+body.page-layout .index-lab-hub__list li {
+  margin: 0;
+  counter-increment: lab-hub;
+  border-bottom: 1px solid color-mix(in srgb, var(--border-light) 92%, transparent);
+}
+
+body.page-layout .index-lab-hub__list li:last-child {
+  border-bottom: none;
+}
+
+body.page-layout .index-lab-hub__list a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 3.15rem;
+  padding: 0.75rem 1.25rem 0.75rem 0.95rem;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--c-ink);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  border-left: 3px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+  transition:
+    background 0.2s ease,
+    border-left-color 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+body.page-layout .index-lab-hub__list a::before {
+  content: counter(lab-hub, decimal-leading-zero);
+  flex-shrink: 0;
+  min-width: 1.85rem;
+  font-family: var(--font-ui);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--primary) 72%, var(--c-wine));
+  opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+body.page-layout .index-lab-hub__list a::after {
+  content: "";
+  margin-left: auto;
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+  opacity: 0.22;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23494640' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M7 17L17 7M17 7H9M17 7V15'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+body.page-layout .index-lab-hub__list a:hover,
+body.page-layout .index-lab-hub__list a:focus-visible {
+  background: color-mix(in srgb, var(--card-active-background) 82%, var(--input));
+  border-left-color: var(--primary);
+  padding-left: 1.1rem;
+  color: var(--primary-hover);
+  outline: none;
+}
+
+body.page-layout .index-lab-hub__list a:hover::before,
+body.page-layout .index-lab-hub__list a:focus-visible::before {
+  color: var(--primary);
+  opacity: 1;
+}
+
+body.page-layout .index-lab-hub__list a:hover::after,
+body.page-layout .index-lab-hub__list a:focus-visible::after {
+  opacity: 0.65;
+  transform: translate(2px, -2px);
+}
+
+body.page-layout .index-lab-hub__list a:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--primary) 45%, transparent);
+  outline-offset: -2px;
 }
 
 body.page-layout .index-intro__text a {
@@ -889,12 +1027,127 @@ body.page-layout .index-mini-card__text {
   color: color-mix(in srgb, var(--c-wine) 92%, #555);
 }
 
-/* --- Каталог: щільна сітка карток з власним виглядом (не mini-card) --- */
-body.page-layout.page-catalog .catalog-page__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
-  gap: 1.25rem 1.35rem;
+
+body.page-layout.page-catalog .catalog-page__intro {
   margin-bottom: var(--ix-section-gap);
+}
+
+body.page-layout.page-catalog .catalog-page__intro .catalog-card__tag {
+  margin-left: 0.15rem;
+  vertical-align: 0.12em;
+}
+
+body.page-layout.page-catalog .catalog-simple {
+  margin-bottom: var(--ix-section-gap);
+}
+
+body.page-layout.page-catalog .catalog-simple__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: 1.05rem;
+  border: 1px solid color-mix(in srgb, var(--border-warm-medium) 82%, var(--border-light));
+  box-shadow:
+    0 2px 14px color-mix(in srgb, var(--foreground) 5%, transparent),
+    inset 0 1px 0 color-mix(in srgb, #fff 65%, transparent);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--muted-canvas) 96%, var(--input));
+}
+
+body.page-layout.page-catalog .catalog-simple__list > li {
+  margin: 0;
+  padding: 1.15rem 1.35rem 1.2rem 1.45rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--border-light) 78%, transparent);
+}
+
+body.page-layout.page-catalog .catalog-simple__list > li:last-child {
+  border-bottom: none;
+}
+
+body.page-layout.page-catalog .catalog-simple__category {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+body.page-layout.page-catalog .catalog-simple__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  border-radius: 0.75rem;
+  color: var(--primary-hover);
+  background: color-mix(in srgb, #fff 82%, var(--primary-icon-bg));
+  border: 1px solid color-mix(in srgb, var(--primary) 18%, transparent);
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--foreground) 6%, transparent);
+}
+
+body.page-layout.page-catalog .catalog-simple__icon svg {
+  stroke-width: 2;
+}
+
+body.page-layout.page-catalog .catalog-simple__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--c-ink);
+}
+
+body.page-layout.page-catalog .catalog-simple__title .catalog-card__tag {
+  margin-left: 0.4rem;
+  vertical-align: 0.12em;
+}
+
+body.page-layout.page-catalog .catalog-simple__subs {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0.65rem 0 0 0.15rem;
+  border-top: 1px dashed color-mix(in srgb, var(--border-warm-medium) 88%, transparent);
+}
+
+body.page-layout.page-catalog .catalog-simple__subs li {
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0.4rem 0;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--c-wine) 96%, #444);
+  border-bottom: 1px solid color-mix(in srgb, var(--border-light) 72%, transparent);
+}
+
+body.page-layout.page-catalog .catalog-simple__subs li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+body.page-layout.page-catalog .catalog-simple__sub-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.12em;
+  color: color-mix(in srgb, var(--primary) 45%, var(--c-wine));
+  opacity: 0.85;
+}
+
+body.page-layout.page-catalog .catalog-simple__sub-icon svg {
+  stroke-width: 2.25;
+}
+
+body.page-layout.page-catalog .catalog-simple__sub--new {
+  font-weight: 600;
 }
 
 body.page-layout .catalog-card {
@@ -1105,14 +1358,20 @@ body.page-layout .catalog-card__tag {
   vertical-align: 0.14em;
 }
 
-/* --- Галерея (сторінка): блок інтро + картки прев’ю як у решті layout --- */
+
+body.page-layout.page-gallery .index-feed {
+  background-image: url("../images/gallery-bg-texture.svg");
+  background-repeat: repeat;
+  background-size: auto;
+}
+
 body.page-layout.page-gallery .gallery-page__intro .gallery-page__grid {
   margin-top: 1.35rem;
 }
 
 body.page-layout.page-gallery .gallery-page__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16.5rem, 1fr));
   gap: 1.25rem 1.35rem;
   list-style: none;
   margin: 0;
@@ -1120,29 +1379,31 @@ body.page-layout.page-gallery .gallery-page__grid {
 }
 
 body.page-layout.page-gallery .gallery-page__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
+  padding: 0;
   text-decoration: none;
   color: inherit;
   border-radius: 1.05rem;
   overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--border-warm-medium) 80%, var(--border-light));
+
+  border: 3px solid color-mix(in srgb, var(--primary-border) 42%, var(--primary));
   background: linear-gradient(
-    165deg,
+    168deg,
     color-mix(in srgb, var(--muted-canvas) 94%, var(--primary-50)) 0%,
     var(--input) 100%
   );
   box-shadow: var(--ix-card-shadow);
   transition:
-    transform 0.2s ease,
     box-shadow 0.2s ease,
     border-color 0.2s ease;
 }
 
 body.page-layout.page-gallery .gallery-page__card:hover {
-  transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--primary) 28%, var(--border-warm));
+
+  border-color: transparent;
   box-shadow: var(--ix-card-shadow-strong);
 }
 
@@ -1154,7 +1415,13 @@ body.page-layout.page-gallery .gallery-page__card:focus-visible {
 body.page-layout.page-gallery .gallery-page__thumb {
   position: relative;
   display: block;
+  flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  overflow: hidden;
   background: color-mix(in srgb, var(--foreground) 6%, var(--muted-canvas));
+  border: none;
 }
 
 body.page-layout.page-gallery .gallery-page__thumb img {
@@ -1163,35 +1430,40 @@ body.page-layout.page-gallery .gallery-page__thumb img {
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: center;
 }
 
 body.page-layout.page-gallery .gallery-page__badge {
   position: absolute;
-  top: 0.55rem;
-  right: 0.55rem;
-  padding: 0.26rem 0.62rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.22rem 0.55rem;
   font-family: var(--font-ui);
-  font-size: 0.74rem;
+  font-size: 0.65rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
-  color: var(--c-ink);
-  background: color-mix(in srgb, #fff 92%, var(--toast-bg));
-  border: 1px solid color-mix(in srgb, var(--border-warm-medium) 72%, transparent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--primary-hover) 95%, #1a1008);
+  background: color-mix(in srgb, #fff 90%, var(--toast-bg));
+  border: 1px solid color-mix(in srgb, var(--border-warm-medium) 70%, transparent);
   border-radius: 999px;
-  box-shadow: 0 2px 10px color-mix(in srgb, var(--foreground) 10%, transparent);
+  box-shadow: 0 2px 10px color-mix(in srgb, var(--foreground) 12%, transparent);
 }
 
 body.page-layout.page-gallery .gallery-page__caption {
-  padding: 0.85rem 1rem 0.95rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.4;
-  color: var(--c-wine);
-  border-top: 1px dashed color-mix(in srgb, var(--border-warm-medium) 85%, transparent);
-  background: color-mix(in srgb, var(--toast-bg) 65%, transparent);
+  flex: 1;
+  margin: 0;
+  padding: 0.85rem 1rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  color: var(--c-ink);
+  background: color-mix(in srgb, var(--toast-bg) 50%, transparent);
 }
 
-/* --- Реєстрація: інтро + панель форми в стилі інших сторінок --- */
+
 body.page-layout.page-registration .registration-page__intro {
   margin-bottom: var(--ix-section-gap);
 }
@@ -1222,14 +1494,16 @@ body.page-layout.page-registration .registration-page__lead {
 
 body.page-layout.page-registration .registration-page__form .text-field,
 body.page-layout.page-registration .registration-page__form textarea.text-field {
-  width: 100%;
-  max-width: min(30rem, 100%);
+  width: 280px;
+  max-width: 100%;
   padding: 0.52rem 0.68rem;
   border-radius: 0.5rem;
+  box-sizing: border-box;
 }
 
 body.page-layout.page-registration .registration-page__form .text-field--password {
-  max-width: min(14rem, 100%);
+  width: 160px;
+  max-width: 100%;
 }
 
 body.page-layout.page-registration .registration-page__form p {
@@ -1280,7 +1554,7 @@ body.page-layout.page-registration .form-register__buttons .btn {
   font-size: 0.88rem;
 }
 
-/* --- Контакти: інтро + блок карти + блок форми --- */
+
 body.page-layout.page-contacts .contacts-page__intro {
   margin-bottom: var(--ix-section-gap);
 }
@@ -1537,7 +1811,7 @@ body.page-layout .index-section-title {
   border-bottom: 1px solid var(--ix-border);
 }
 
-/* Підвал головної — лише рядок копірайту */
+
 body.page-layout .site-footer--index {
   margin-top: auto;
   width: 100%;
@@ -1627,7 +1901,7 @@ body.page-layout .site-footer--index__copy {
   vertical-align: -0.2em;
 }
 
-/* --- Внутрішні сторінки з body.page-layout (той самий каркас, що й головна) --- */
+
 body.page-layout .index-top-header--minimal {
   height: var(--index-header-height);
   min-height: var(--index-header-height);
@@ -1685,7 +1959,7 @@ body.page-layout .article-preview__excerpt {
   border: 1px solid var(--border-light);
 }
 
-/* Сторінка списку статей — картки-сітка як на головній */
+
 body.page-layout .articles-listing__lead {
   margin: 0 0 var(--ix-section-gap);
 }
@@ -1697,9 +1971,9 @@ body.page-layout .articles-listing__grid {
   margin-bottom: var(--ix-section-gap);
 }
 
-/* Сторінка статей: «Швидкі теми» на всю ширину колонки + три картки в ряд на широкому екрані */
+
 body.page-layout.page-articles .articles-listing__quick-topics {
-  /* секція має клас index-bento — скидаємо сітку обгортки, лишаємо сітку лише на внутрішньому div */
+
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -1708,7 +1982,7 @@ body.page-layout.page-articles .articles-listing__quick-topics {
   max-width: none;
   margin-left: calc(-1 * var(--ix-main-padding-x));
   margin-right: calc(-1 * var(--ix-main-padding-x));
-  /* один горизонтальний відступ для заголовка й сітки — як у решти контенту main */
+
   padding-inline: var(--ix-main-padding-x);
 }
 
@@ -1872,9 +2146,9 @@ body.page-layout .article-single__h1 {
   color: var(--foreground);
 }
 
-/* Сторінка статті — блоки як на головній (intro / bento / highlight) */
+
 body.page-layout .article-page__hero .article-single__h1 {
-  text-align: left;
+  text-align: center;
   margin-bottom: 0.65rem;
   font-size: clamp(1.2rem, 3vw, 1.55rem);
 }
@@ -1892,13 +2166,13 @@ body.page-layout .article-page .index-intro p {
   text-align: left;
 }
 
-body.page-layout .article-page .index-intro p::first-letter {
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: inherit;
-  color: inherit;
-  padding: 0;
-  line-height: inherit;
+body.page-layout .article-page p::first-letter {
+  font-family: var(--font-display);
+  font-size: 2.1em;
+  line-height: 0.9;
+  color: #7a2e0f;
+  font-weight: 600;
+  padding-right: 0.1em;
 }
 
 body.page-layout .article-page .article-comments.index-intro {
@@ -1924,16 +2198,6 @@ body.page-layout .comment {
   border-left-color: var(--primary);
 }
 
-body.page-layout .catalog-categories > li {
-  background-color: color-mix(in srgb, var(--tag-warm-bg) 55%, var(--input));
-  border: 1px solid var(--border-light);
-}
-
-body.page-layout .catalog-subcategories {
-  background-color: color-mix(in srgb, var(--muted-canvas) 95%, var(--input));
-  border: 1px solid var(--border-subtle);
-}
-
 body.page-layout .form-register .text-field,
 body.page-layout .form-contact .text-field {
   border: 1px solid var(--input-border);
@@ -1941,7 +2205,8 @@ body.page-layout .form-contact .text-field {
   background: var(--input);
 }
 
-body.page-layout .form-register .text-field--email:focus {
+body.page-layout .form-register .text-field--email:focus,
+body.page-layout .form-register .text-field--email:valid {
   background-color: color-mix(in srgb, var(--info-badge-bg) 40%, var(--input));
   color: var(--foreground);
 }
@@ -1981,7 +2246,7 @@ body.page-layout .map-image {
   border-radius: 0.4rem;
 }
 
-/* === п.3 Сторінка «Статті» (список) — легасі без layout === */
+
 .articles-listing h1 {
   font-family: var(--font-display);
   color: #2a1a0e;
@@ -1991,7 +2256,7 @@ body.page-layout .map-image {
   margin-bottom: 2rem;
 }
 
-/* Заголовок = посилання: інший колір ніж у звичайних лінків, без підкреслення, лише border-bottom */
+
 .article-preview__title a {
   font-family: var(--font-display);
   color: var(--link-article);
@@ -2006,14 +2271,14 @@ body.page-layout .map-image {
   border-bottom-color: #0c2138;
 }
 
-/* Короткий зміст — фон */
+
 .article-preview__excerpt {
   background-color: var(--excerpt-bg);
   padding: 0.6rem 0.75rem;
   border-radius: 4px;
 }
 
-/* читати далі */
+
 .read-more {
   color: var(--read-more);
   text-decoration: underline;
@@ -2025,13 +2290,13 @@ body.page-layout .map-image {
   color: #0842a3;
 }
 
-/* Перейти до коментарів — сірий */
+
 .to-comments {
   color: var(--comments-link);
   text-decoration: underline;
 }
 
-/* === п.4 Сторінка однієї статті: заголовок по центру, перша літера абзацу === */
+
 .article-single__h1 {
   text-align: center;
   font-family: var(--font-display);
@@ -2073,54 +2338,6 @@ body.page-layout .map-image {
   border-left: 3px solid #8b7355;
 }
 
-/* === п.5 Каталог: маркери, шрифти, фони, ширина, new === */
-.catalog-wrap {
-  max-width: 32rem;
-}
-
-.catalog-categories {
-  list-style-image: url("../images/marker-category.svg");
-  margin: 0;
-  padding-left: 1.6rem;
-}
-
-.catalog-categories > li {
-  margin-bottom: 0.9rem;
-  background-color: #e6dccf;
-  padding: 0.5rem 0.6rem 0.65rem 0.5rem;
-  border-radius: 4px;
-}
-
-.category-label {
-  display: block;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-
-.catalog-subcategories {
-  list-style-image: url("../images/marker-subcategory.svg");
-  margin: 0.25rem 0 0;
-  padding: 0.4rem 0.5rem 0.4rem 1.5rem;
-  background-color: #dce8df;
-  font-size: 0.92rem;
-  border-radius: 3px;
-  list-style-position: outside;
-}
-
-.catalog-subcategories li {
-  margin-bottom: 0.2rem;
-}
-
-.catalog-categories .is-new::after,
-.catalog-subcategories .is-new::after {
-  content: " new";
-  color: #666;
-  font-size: 0.85em;
-  font-weight: 600;
-}
-
-/* === п.7 Реєстрація: ширина полів, email :focus, кнопки :active, checkbox/radio hover === */
 .form-register label,
 .form-contact label,
 .form-register legend {
@@ -2134,7 +2351,7 @@ body.page-layout .map-image {
   margin: 0.75rem 0;
 }
 
-/* Одна ширина для «стандартних» полів, інша — для пароля */
+
 .form-register .text-field,
 .form-contact .text-field {
   width: 280px;
@@ -2148,14 +2365,15 @@ body.page-layout .map-image {
   width: 160px;
 }
 
-/* Email: зміна тла й кольору шрифту у фокусі */
-.form-register .text-field--email:focus {
+
+.form-register .text-field--email:focus,
+.form-register .text-field--email:valid {
   background-color: #d9edf7;
   color: #0a2540;
   outline: none;
 }
 
-/* Кнопки: різні кольори у :active */
+
 .btn {
   padding: 0.45rem 1rem;
   font: inherit;
@@ -2186,7 +2404,7 @@ body.page-layout .map-image {
   color: #fff;
 }
 
-/* Додатково: переривчаста рамка навколо checkbox / radio при наведенні */
+
 .form-register input[type="checkbox"]:hover,
 .form-register input[type="radio"]:hover {
   outline: 2px dashed #555;
@@ -2212,12 +2430,6 @@ body.page-layout .map-image {
   flex-wrap: wrap;
 }
 
-/* Підказка: кожне слово з великої; точне виправлення — у JS після blur */
-.js-title-case {
-  text-transform: capitalize;
-}
-
-/* Контакти: карта */
 .map-figure {
   margin: 1rem 0;
   max-width: 100%;
@@ -2229,5 +2441,3 @@ body.page-layout .map-image {
   display: block;
   border: 1px solid #c9bfb4;
 }
-
-/* Форма зворотного зв'язку — ті ж базові .text-field */

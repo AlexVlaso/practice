@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <title>Контакти — StylKrok</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="page-layout page-contacts">
     <aside class="index-sidebar" aria-label="Навігація по розділах">
@@ -55,6 +55,9 @@
       <div class="index-feed">
         <header class="index-top-header" aria-label="Page header">
           <div class="index-top-header__pattern" aria-hidden="true"></div>
+          <div class="index-top-header__corner" aria-hidden="true">
+            <img src="images/decor-corner.png" alt="" width="180" height="180" decoding="async" />
+          </div>
           <div class="index-top-header__inner">
             <p class="index-top-header__eyebrow">Curated for the city</p>
             <h1 class="index-top-header__title">Contacts</h1>
@@ -79,7 +82,7 @@
           <section class="contacts-page__shell contacts-page__map-block" aria-labelledby="contacts-map-title">
             <h2 class="index-section-title contacts-page__section-title" id="contacts-map-title">Як нас знайти</h2>
             <p class="contacts-page__lead">
-              Точка на карті та підказка по метро — для звіту замініть знімок у папці <code>images/</code> на власний скриншот.
+              Фрагмент карти з маршрутом до точки — знімок екрана з Google Карти.
             </p>
             <div class="contacts-page__address">
               <p class="contacts-page__address-line">
@@ -93,15 +96,13 @@
             <figure class="contacts-page__figure">
               <img
                 class="map-image contacts-page__map-img"
-                src="images/map-screenshot.png"
-                width="600"
-                height="360"
-                alt="Схема: як дістатися (заглушка, замініть на знімок з Google Карт у звіті)"
+                src="images/map-location.png"
+                alt="Фрагмент карти: розташування магазину StylKrok та найближчі станції метро"
                 loading="lazy"
                 decoding="async"
               />
               <figcaption class="contacts-page__map-caption">
-                Карта (заглушка; для здачі вставте власний скриншот у <code>images/map-screenshot.png</code>)
+                Як дістатися: скриншот з Google Карти (<code>images/map-location.png</code>)
               </figcaption>
             </figure>
           </section>
