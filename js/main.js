@@ -1,4 +1,7 @@
-/** Ініціалізація усіх скриптів після побудови DOM */
+/**
+ * Лабораторна робота №2
+ */
+
 document.addEventListener("DOMContentLoaded", () => {
   initLucideIcons();
   initTitleCaseInputs();
@@ -39,6 +42,10 @@ function initTitleCaseInputs() {
     });
   }
 }
+
+/**
+ * Лабораторна робота №3
+ */
 
 function initHeroSlider() {
   const root = document.querySelector(".hero-slider");
@@ -96,8 +103,7 @@ const REGISTRATION_MESSAGES = {
   phoneIncomplete:
     "Доведіть номер до кінця: після коду країни потрібні 10 цифр у форматі 0XX XXX XX XX.",
   codeRequired: "Вкажіть код товару.",
-  codeRange:
-    "Код має бути цілим числом від 1000 до 10000 включно.",
+  codeRange: "Код має бути цілим числом від 1000 до 10000 включно.",
 };
 
 /** Залишає лише національні цифри (без +38); підтримує вставку повного міжнародного запису */
@@ -240,8 +246,7 @@ function initRegistrationFormValidation() {
     }
 
     const num = Number(raw);
-    const isValidInteger =
-      Number.isInteger(num) && num >= 1000 && num <= 10000;
+    const isValidInteger = Number.isInteger(num) && num >= 1000 && num <= 10000;
 
     if (!isValidInteger) {
       setFieldError(codeInput, codeError, REGISTRATION_MESSAGES.codeRange);

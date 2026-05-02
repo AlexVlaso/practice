@@ -1,3 +1,7 @@
+/**
+ * Лабораторна робота №4
+ */
+
 document.addEventListener("DOMContentLoaded", () => {
   initContactsLocationsAjax();
 });
