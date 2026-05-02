@@ -79,6 +79,111 @@
         </header>
 
         <main class="site-main site-main--index" id="main">
+          <section
+            class="hero-slider"
+            aria-roledescription="carousel"
+            aria-label="Добірки та новинки StylKrok"
+          >
+            <div class="hero-slider__viewport">
+              <div class="hero-slider__track" id="hero-slider-track">
+                <figure class="hero-slider__slide is-active" id="hero-slide-0" data-slide-index="0">
+                  <img
+                    class="hero-slider__img"
+                    src="images/gallery-sneakers.webp"
+                    alt="Міські кросівки з каталогу StylKrok"
+                    width="960"
+                    height="540"
+                    loading="eager"
+                    decoding="async"
+                  />
+                </figure>
+                <figure class="hero-slider__slide" id="hero-slide-1" data-slide-index="1">
+                  <img
+                    class="hero-slider__img"
+                    src="images/gallery-jacket.png"
+                    alt="Легка куртка для міжсезоння"
+                    width="960"
+                    height="540"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <figure class="hero-slider__slide" id="hero-slide-2" data-slide-index="2">
+                  <img
+                    class="hero-slider__img"
+                    src="images/gallery-shoes-casual.webp"
+                    alt="Повсякденне взуття StylKrok"
+                    width="960"
+                    height="540"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <figure class="hero-slider__slide" id="hero-slide-3" data-slide-index="3">
+                  <img
+                    class="hero-slider__img"
+                    src="images/gallery-tshirt-casual.jpg"
+                    alt="Базові футболки з натуральних тканин"
+                    width="960"
+                    height="540"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+              </div>
+              <div class="hero-slider__dots" role="tablist" aria-label="Обрати слайд">
+                <button
+                  type="button"
+                  class="hero-slider__dot"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="hero-slide-0"
+                  id="hero-tab-0"
+                  tabindex="0"
+                  data-slide-to="0"
+                >
+                  <span class="visually-hidden">Слайд 1 з 4</span>
+                </button>
+                <button
+                  type="button"
+                  class="hero-slider__dot"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="hero-slide-1"
+                  id="hero-tab-1"
+                  tabindex="-1"
+                  data-slide-to="1"
+                >
+                  <span class="visually-hidden">Слайд 2 з 4</span>
+                </button>
+                <button
+                  type="button"
+                  class="hero-slider__dot"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="hero-slide-2"
+                  id="hero-tab-2"
+                  tabindex="-1"
+                  data-slide-to="2"
+                >
+                  <span class="visually-hidden">Слайд 3 з 4</span>
+                </button>
+                <button
+                  type="button"
+                  class="hero-slider__dot"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="hero-slide-3"
+                  id="hero-tab-3"
+                  tabindex="-1"
+                  data-slide-to="3"
+                >
+                  <span class="visually-hidden">Слайд 4 з 4</span>
+                </button>
+              </div>
+            </div>
+          </section>
+
           <section class="index-lab-hub index-intro" aria-labelledby="lab-hub-title">
             <h2 class="index-intro__title" id="lab-hub-title">Розділи сайту</h2>
             <ul class="index-lab-hub__list">

@@ -80,7 +80,9 @@
           <section class="registration-page__shell" aria-labelledby="reg-form-title">
             <h2 class="index-section-title registration-page__form-title" id="reg-form-title">Анкета</h2>
             <p class="registration-page__lead">
-              Поля з позначкою обов’язковості браузером перевіряються перед відправленням; пароль і email потрібні для входу в кабінет (навчальний приклад).
+              Поля з позначкою обов’язковості перевіряються перед відправленням; номер телефону набирається з маскою
+              +38 (0XX) XXX-XX-XX, код товару — скриптом у діапазоні 1000–10000. Пароль і email потрібні для входу в кабінет
+              (навчальний приклад).
             </p>
 
             <form class="form-register registration-page__form" action="#" method="get">
@@ -91,6 +93,24 @@
               <p>
                 <label for="firstName">Ім’я</label>
                 <input class="text-field js-title-case" type="text" id="firstName" name="firstName" required />
+              </p>
+              <p>
+                <label for="reg-phone">Номер телефону</label>
+                <input
+                  class="text-field js-phone-mask"
+                  type="tel"
+                  id="reg-phone"
+                  name="phone"
+                  inputmode="numeric"
+                  autocomplete="tel"
+                  placeholder="+38 (067) 123-45-67"
+                  maxlength="19"
+                  required
+                  aria-describedby="reg-phone-hint"
+                />
+                <span class="form-hint" id="reg-phone-hint"
+                  >Набирайте лише цифри — пробіли й дефіси підставляються автоматично (+38 (0хх) ххх-хх-хх).</span
+                >
               </p>
               <p>
                 <label for="reg-email">Адреса електронної пошти</label>
@@ -125,6 +145,23 @@
                 <label><input type="radio" name="focus" value="shoes" checked /> взуття</label>
                 <label><input type="radio" name="focus" value="clothes" /> одяг</label>
               </fieldset>
+              <p>
+                <label for="product-code">Код обраного товару</label>
+                <input
+                  class="text-field"
+                  type="number"
+                  id="product-code"
+                  name="productCode"
+                  min="1000"
+                  max="10000"
+                  step="1"
+                  placeholder="наприклад 5420"
+                  required
+                  aria-describedby="product-code-hint product-code-error"
+                />
+                <span class="form-hint" id="product-code-hint">Ціле число від 1000 до 10000 включно</span>
+                <span class="form-field-error" id="product-code-error" role="alert" hidden></span>
+              </p>
               <p>
                 <label for="about">Про себе (довільна форма)</label>
                 <textarea class="text-field" id="about" name="about" rows="4" cols="40"></textarea>
