@@ -10,6 +10,12 @@
       rel="stylesheet"
     />
     <title>Контакти — StylKrok</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="page-layout page-contacts">
@@ -70,8 +76,9 @@
           <section class="index-intro contacts-page__intro" aria-labelledby="contacts-intro-title">
             <h2 class="index-intro__title" id="contacts-intro-title">Зв’язок із StylKrok</h2>
             <p class="index-intro__text">
-              Нижче — адреса й схема проходу для навчального макета. Форма допоможе поставити питання щодо розміру,
-              наявності кольору або умов повернення перед замовленням.
+              Нижче — точки StylKrok на інтерактивній карті (Leaflet + OpenStreetMap): список об’єктів підвантажується
+              через AJAX з локальних JSON-файлів; при виборі точки без перезавантаження сторінки відображаються адреса,
+              години й телефони, карта центрується на обраному місці.
             </p>
             <p class="index-intro__text index-intro__text--follow">
               Оформити акаунт можна на сторінці <a href="registration.html">реєстрації</a>; асортимент — у
@@ -80,31 +87,45 @@
           </section>
 
           <section class="contacts-page__shell contacts-page__map-block" aria-labelledby="contacts-map-title">
-            <h2 class="index-section-title contacts-page__section-title" id="contacts-map-title">Як нас знайти</h2>
+            <h2 class="index-section-title contacts-page__section-title" id="contacts-map-title">
+              Об’єкти StylKrok та карта
+            </h2>
             <p class="contacts-page__lead">
-              Фрагмент карти з маршрутом до точки — знімок екрана з Google Карти.
+              Оберіть точку у списку — дані підвантажуються методом <code>fetch</code> (AJAX) з ресурсів
+              <code>api/locations/</code>. Карта перемикається на координати обраного об’єкта та показує маркер по центру
+              видимої області.
             </p>
-            <div class="contacts-page__address">
-              <p class="contacts-page__address-line">
-                <i data-lucide="map-pin" class="lucide-inline" width="18" height="18" aria-hidden="true"></i>
-                <strong>Адреса:</strong> м. Київ, вул. Хрещатик, 1 (приклад для навчальної верстки).
-              </p>
-              <p class="contacts-page__address-line">
-                Як дістатися: ст. метро «Хрещатик» або «Майдан Незалежності», 3 хв пішки.
-              </p>
+
+            <div class="contacts-page__locations-layout">
+              <div class="contacts-page__locations-panel">
+                <h3 class="contacts-page__subsection-title">Пункти видачі та шоуруми</h3>
+                <ul
+                  class="contacts-page__location-list"
+                  id="contacts-location-list"
+                  role="list"
+                  aria-label="Оберіть об’єкт StylKrok"
+                ></ul>
+                <div
+                  class="contacts-location-detail"
+                  id="contacts-location-detail"
+                  aria-live="polite"
+                  aria-busy="false"
+                ></div>
+                <p class="contacts-location-detail__status" id="contacts-location-status" role="status" hidden></p>
+              </div>
+              <div class="contacts-page__map-panel">
+                <div
+                  id="contacts-map"
+                  class="contacts-page__leaflet-map"
+                  role="application"
+                  aria-label="Інтерактивна карта OpenStreetMap, центр змінюється залежно від обраної точки"
+                ></div>
+                <p class="contacts-page__map-attribution">
+                  Тайли © учасники <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>; карта —
+                  бібліотека <a href="https://leafletjs.com/">Leaflet</a>.
+                </p>
+              </div>
             </div>
-            <figure class="contacts-page__figure">
-              <img
-                class="map-image contacts-page__map-img"
-                src="images/map-location.png"
-                alt="Фрагмент карти: розташування магазину StylKrok та найближчі станції метро"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption class="contacts-page__map-caption">
-                Як дістатися: скриншот з Google Карти (<code>images/map-location.png</code>)
-              </figcaption>
-            </figure>
           </section>
 
           <section class="contacts-page__shell contacts-page__form-block" aria-labelledby="contacts-form-title">
@@ -144,7 +165,13 @@
       </div>
     </div>
 
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
     <script src="js/main.js" defer></script>
+    <script src="js/contacts-page.js" defer></script>
   </body>
 </html>

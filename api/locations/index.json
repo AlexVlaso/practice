@@ -1,0 +1,20 @@
+{
+  "locations": [
+    {
+      "id": "kyiv-hub",
+      "shortName": "Київ — шоурум (Хрещатик)"
+    },
+    {
+      "id": "kyiv-np",
+      "shortName": "Київ — пункт видачі Нова Пошта"
+    },
+    {
+      "id": "lviv-hub",
+      "shortName": "Львів — філіал"
+    },
+    {
+      "id": "odesa-pickup",
+      "shortName": "Одеса — місце видачі замовлень"
+    }
+  ]
+}
