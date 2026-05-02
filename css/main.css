@@ -2251,13 +2251,15 @@ body.page-layout .article-page .index-intro p {
   text-align: left;
 }
 
-body.page-layout .article-page p::first-letter {
+body.page-layout .article-page .article-drop-cap {
   font-family: var(--font-display);
   font-size: 2.1em;
   line-height: 0.9;
   color: #7a2e0f;
   font-weight: 600;
   padding-right: 0.1em;
+  display: inline-block;
+  vertical-align: baseline;
 }
 
 body.page-layout .article-page .article-comments.index-intro {
@@ -2386,15 +2388,6 @@ body.page-layout .map-image {
 
 .article-single p {
   text-align: justify;
-}
-
-.article-single p::first-letter {
-  font-family: var(--font-display);
-  font-size: 2.1em;
-  line-height: 0.9;
-  color: #7a2e0f;
-  font-weight: 600;
-  padding-right: 0.1em;
 }
 
 .article-comments h2 {
